@@ -1,0 +1,25 @@
+For each of the following, explain why you're not surprised that there is no regular expression defining it.
+
+A. Strings of a's and b's where there are more a's than b's.
+
+All regular expressions must be able to be expressed in terms of a DFA (deterministic finite automata). 
+For a DFA to determine whether a string has more a's than b's, it must keep track of how many a's
+it has encountered and how many b's it has encountered. In addition, a DFA must have a finite number
+of states. However, a string could potentially have an infinite number of a's (or, at least, a very 
+large value unknown in advance to the DFA). Thus, a DFA can't keep track of all the a's in a string,
+so a regular expression can't recognize only strings where there are more a's than b's.
+
+B. Strings of a's and b's that are palindromes (the same forward as backward)
+
+The same general idea of the explanation for A probably applies here. The DFA would need to 
+keep track of the position of each symbol that it has currently encountered (because it can't simultaneously
+read from the back and the front). This is untenable, because the string has an unknown (and potentially
+very large) amount of symbols. No possible DFA = no possible regular expression.
+
+C. Syntactically correct ML Programs
+
+Regular expressions track string patterns, but analyzing the syntax of ML programs requires
+knowing the meaning of various program elements. Thus, regex can't distinguish syntactically correct
+ML programs.
+
+  

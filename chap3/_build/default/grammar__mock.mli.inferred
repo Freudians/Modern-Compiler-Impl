@@ -1,0 +1,66 @@
+type token =
+    WHILE
+  | VAR
+  | TYPE
+  | TO
+  | TIMES
+  | THEN
+  | STRING of string
+  | SEMICOLON
+  | RPAREN
+  | RBRACK
+  | RBRACE
+  | PLUS
+  | OR
+  | OF
+  | NIL
+  | NEQ
+  | MINUS
+  | LT
+  | LPAREN
+  | LET
+  | LE
+  | LBRACK
+  | LBRACE
+  | INT of int
+  | IN
+  | IF
+  | ID of string
+  | GT
+  | GE
+  | FUNCTION
+  | FOR
+  | EQ
+  | EOF
+  | END
+  | ELSE
+  | DOT
+  | DO
+  | DIVIDE
+  | COMMA
+  | COLON
+  | BREAK
+  | ASSIGN
+  | ARRAY
+  | AND
+val menhir_begin_marker : int
+val xv_vardec : unit
+val xv_type_id : unit
+val xv_tyfields : unit
+val xv_tydec : unit
+val xv_ty : unit
+val xv_stmt : unit
+val xv_program : unit
+val xv_lvalue : unit
+val xv_idexpseq : unit
+val xv_fundec : unit
+val xv_funcexpseq : unit
+val xv_expseq : unit
+val xv_exp : unit
+val xv_dot_id_helper : unit
+val xv_decs : unit
+val xv_dec : unit
+val xv_comp : unit
+val xv_bool : unit
+val xv_arith : unit
+val menhir_end_marker : int

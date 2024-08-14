@@ -1,0 +1,379 @@
+# dune build
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/anthonydu/.cache/dune/db
+# Workspace root: /home/anthonydu/appel/chap2/ocaml_project
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /home/anthonydu/.opam/default/bin/ocamlc.opt -config > /tmp/dune_4844e4_output
+$ (cd _build/default && /home/anthonydu/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I .Driver.objs/byte -intf-suffix .ml -no-alias-deps -opaque -open Driver__ -o .Driver.objs/byte/driver__Tokens.cmo -c -impl tokens.ml)
+> File "tokens.ml", line 3, characters 13-14:
+> 3 |   let type_ (i, _) = "TYPE   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 4, characters 12-13:
+> 4 |   let var_ (i, _) = "VAR   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 5, characters 17-18:
+> 5 |   let function_ (i, _) = "FUNCTION   " (* string_of_int i *)
+>                      ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 6, characters 14-15:
+> 6 |   let break_ (i, _) = "BREAK   " (* string_of_int i *)
+>                   ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 7, characters 11-12:
+> 7 |   let of_ (i, _) = "OF   " (* string_of_int i *)
+>                ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 8, characters 12-13:
+> 8 |   let end_ (i, _) = "END   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 9, characters 11-12:
+> 9 |   let in_ (i, _) = "IN   " (* string_of_int i *)
+>                ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 10, characters 12-13:
+> 10 |   let nil_ (i, _) = "NIL   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 11, characters 12-13:
+> 11 |   let let_ (i, _) = "LET   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 12, characters 11-12:
+> 12 |   let do_ (i, _) = "DO   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 13, characters 11-12:
+> 13 |   let to_ (i, _) = "TO   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 14, characters 12-13:
+> 14 |   let for_ (i, _) = "FOR   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 15, characters 14-15:
+> 15 |   let while_ (i, _) = "WHILE   " (* string_of_int i *)
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 16, characters 13-14:
+> 16 |   let else_ (i, _) = "ELSE   " (* string_of_int i *)
+>                   ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 17, characters 13-14:
+> 17 |   let then_ (i, _) = "THEN   " (* string_of_int i *)
+>                   ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 18, characters 11-12:
+> 18 |   let if_ (i, _) = "IF   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 19, characters 14-15:
+> 19 |   let array_ (i, _) = "ARRAY   " (* string_of_int i *)
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 20, characters 15-16:
+> 20 |   let assign_ (i, _) = "ASSIGN   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 21, characters 11-12:
+> 21 |   let or_ (i, _) = "OR   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 22, characters 12-13:
+> 22 |   let and_ (i, _) = "AND   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 23, characters 11-12:
+> 23 |   let ge_ (i, _) = "GE   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 24, characters 11-12:
+> 24 |   let gt_ (i, _) = "GT   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 25, characters 11-12:
+> 25 |   let le_ (i, _) = "LE   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 26, characters 11-12:
+> 26 |   let lt_ (i, _) = "LT   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 27, characters 12-13:
+> 27 |   let neq_ (i, _) = "NEQ   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 28, characters 11-12:
+> 28 |   let eq_ (i, _) = "EQ   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 29, characters 15-16:
+> 29 |   let divide_ (i, _) = "DIVIDE   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 30, characters 14-15:
+> 30 |   let times_ (i, _) = "TIMES   " (* string_of_int i *)
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 31, characters 14-15:
+> 31 |   let minus_ (i, _) = "MINUS   " (* string_of_int i *)
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 32, characters 13-14:
+> 32 |   let plus_ (i, _) = "PLUS   " (* string_of_int i *)
+>                   ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 33, characters 12-13:
+> 33 |   let dot_ (i, _) = "DOT   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 34, characters 15-16:
+> 34 |   let rbrace_ (i, _) = "RBRACE   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 35, characters 15-16:
+> 35 |   let lbrace_ (i, _) = "LBRACE   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 36, characters 15-16:
+> 36 |   let rbrack_ (i, _) = "RBRACK   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 37, characters 15-16:
+> 37 |   let lbrack_ (i, _) = "LBRACK   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 38, characters 15-16:
+> 38 |   let rparen_ (i, _) = "RPAREN   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 39, characters 15-16:
+> 39 |   let lparen_ (i, _) = "LPAREN   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 40, characters 18-19:
+> 40 |   let semicolon_ (i, _) = "SEMICOLON   " (* string_of_int i *)
+>                        ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 41, characters 14-15:
+> 41 |   let colon_ (i, _) = "COLON   " (* string_of_int i *)
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 42, characters 14-15:
+> 42 |   let comma_ (i, _) = "COMMA   " (* string_of_int i *)
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 43, characters 18-19:
+> 43 |   let string_ (s, i, _) = "STRING(" ^ s ^ ")     " (* string_of_int i *)
+>                        ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 44, characters 15-16:
+> 44 |   let int_ (c, i, _) = "INT(" ^ string_of_int c ^ ")   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 45, characters 14-15:
+> 45 |   let id_ (s, i, _) = "ID(" ^ s ^ ")     " (* string_of_int i *)
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 46, characters 12-13:
+> 46 |   let eof_ (i, _) = "EOF   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+[2]
+$ (cd _build/default && /home/anthonydu/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I .Driver.objs/byte -no-alias-deps -opaque -open Driver__ -o .Driver.objs/byte/driver__Lexer.cmo -c -impl lexer.ml)
+> File "lexer.mll", line 64, characters 5-48:
+> Error (warning 21 [nonreturning-statement]): this statement never returns (or has an unsound type.)
+> File "lexer.mll", line 80, characters 70-77:
+> Error: This expression has type string but an expression was expected of type
+>          unit
+[2]
+$ (cd _build/default && /home/anthonydu/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I .Driver.objs/byte -I .Driver.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Driver__ -o .Driver.objs/native/driver__Tokens.cmx -c -impl tokens.ml)
+> File "tokens.ml", line 3, characters 13-14:
+> 3 |   let type_ (i, _) = "TYPE   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 4, characters 12-13:
+> 4 |   let var_ (i, _) = "VAR   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 5, characters 17-18:
+> 5 |   let function_ (i, _) = "FUNCTION   " (* string_of_int i *)
+>                      ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 6, characters 14-15:
+> 6 |   let break_ (i, _) = "BREAK   " (* string_of_int i *)
+>                   ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 7, characters 11-12:
+> 7 |   let of_ (i, _) = "OF   " (* string_of_int i *)
+>                ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 8, characters 12-13:
+> 8 |   let end_ (i, _) = "END   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 9, characters 11-12:
+> 9 |   let in_ (i, _) = "IN   " (* string_of_int i *)
+>                ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 10, characters 12-13:
+> 10 |   let nil_ (i, _) = "NIL   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 11, characters 12-13:
+> 11 |   let let_ (i, _) = "LET   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 12, characters 11-12:
+> 12 |   let do_ (i, _) = "DO   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 13, characters 11-12:
+> 13 |   let to_ (i, _) = "TO   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 14, characters 12-13:
+> 14 |   let for_ (i, _) = "FOR   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 15, characters 14-15:
+> 15 |   let while_ (i, _) = "WHILE   " (* string_of_int i *)
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 16, characters 13-14:
+> 16 |   let else_ (i, _) = "ELSE   " (* string_of_int i *)
+>                   ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 17, characters 13-14:
+> 17 |   let then_ (i, _) = "THEN   " (* string_of_int i *)
+>                   ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 18, characters 11-12:
+> 18 |   let if_ (i, _) = "IF   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 19, characters 14-15:
+> 19 |   let array_ (i, _) = "ARRAY   " (* string_of_int i *)
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 20, characters 15-16:
+> 20 |   let assign_ (i, _) = "ASSIGN   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 21, characters 11-12:
+> 21 |   let or_ (i, _) = "OR   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 22, characters 12-13:
+> 22 |   let and_ (i, _) = "AND   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 23, characters 11-12:
+> 23 |   let ge_ (i, _) = "GE   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 24, characters 11-12:
+> 24 |   let gt_ (i, _) = "GT   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 25, characters 11-12:
+> 25 |   let le_ (i, _) = "LE   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 26, characters 11-12:
+> 26 |   let lt_ (i, _) = "LT   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 27, characters 12-13:
+> 27 |   let neq_ (i, _) = "NEQ   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 28, characters 11-12:
+> 28 |   let eq_ (i, _) = "EQ   " (* string_of_int i *)
+>                 ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 29, characters 15-16:
+> 29 |   let divide_ (i, _) = "DIVIDE   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 30, characters 14-15:
+> 30 |   let times_ (i, _) = "TIMES   " (* string_of_int i *)
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 31, characters 14-15:
+> 31 |   let minus_ (i, _) = "MINUS   " (* string_of_int i *)
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 32, characters 13-14:
+> 32 |   let plus_ (i, _) = "PLUS   " (* string_of_int i *)
+>                   ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 33, characters 12-13:
+> 33 |   let dot_ (i, _) = "DOT   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 34, characters 15-16:
+> 34 |   let rbrace_ (i, _) = "RBRACE   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 35, characters 15-16:
+> 35 |   let lbrace_ (i, _) = "LBRACE   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 36, characters 15-16:
+> 36 |   let rbrack_ (i, _) = "RBRACK   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 37, characters 15-16:
+> 37 |   let lbrack_ (i, _) = "LBRACK   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 38, characters 15-16:
+> 38 |   let rparen_ (i, _) = "RPAREN   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 39, characters 15-16:
+> 39 |   let lparen_ (i, _) = "LPAREN   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 40, characters 18-19:
+> 40 |   let semicolon_ (i, _) = "SEMICOLON   " (* string_of_int i *)
+>                        ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 41, characters 14-15:
+> 41 |   let colon_ (i, _) = "COLON   " (* string_of_int i *)
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 42, characters 14-15:
+> 42 |   let comma_ (i, _) = "COMMA   " (* string_of_int i *)
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 43, characters 18-19:
+> 43 |   let string_ (s, i, _) = "STRING(" ^ s ^ ")     " (* string_of_int i *)
+>                        ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 44, characters 15-16:
+> 44 |   let int_ (c, i, _) = "INT(" ^ string_of_int c ^ ")   " (* string_of_int i *)
+>                     ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 45, characters 14-15:
+> 45 |   let id_ (s, i, _) = "ID(" ^ s ^ ")     " (* string_of_int i *)
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+> File "tokens.ml", line 46, characters 12-13:
+> 46 |   let eof_ (i, _) = "EOF   " (* string_of_int i *)
+>                  ^
+> Error (warning 27 [unused-var-strict]): unused variable i.
+[2]

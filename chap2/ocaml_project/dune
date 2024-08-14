@@ -1,0 +1,8 @@
+(rule
+(target lexer.ml)
+(deps lexer.mll)
+(action 
+	(run %{bin:ocamllex} -q -o %{target} %{deps})))
+
+(library
+(name Driver))

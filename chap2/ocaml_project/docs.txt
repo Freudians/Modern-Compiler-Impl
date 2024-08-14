@@ -1,0 +1,24 @@
+Comments:
+Upon hitting a "/*", the lexer increments a counter and enters a sub-rule to parse the comment.
+Each additional character is eaten, until the lexer hits a "*/" (counter-1; if counter =0, then go back to regular parsing),
+"/*" (incrementing counter again), or EOF (error out).
+The sub-rule is sufficient to handle unclosed comments where a "*/" is missing. To handle comments where 
+a "/*" is missing, there is a rule in the regular token parsing where if a "*/" is encountered then 
+it errors out.
+
+Strings:
+Upon hitting a " the lexer clears the string_buffer and enters a sub-rule to parse the string. The subrule 
+processes each individual character of the string, allowing it to handle escape sequences.
+After each character is processed, it (or the equivalent encoding, for escape sequences) is appended 
+to the string_buffer. 
+When a plain " is hit by the subrule then the current string_buffer is encoded as the semantic value 
+of a string token and control of the rest of the input to be processed goes 
+back to the regular rule.
+
+Error handling:
+Upon encountering an error a descriptive message is printed, along with the position where the error occurred,
+and an ERROR token is returned as the token of the output. This scheme allows the lexer to detect errors 
+in multiple places in the file, as opposed to if the lexer simply exited (where it could only detect one error)
+
+EOF handling:
+Upon encountering EOF (and assuming it isn't part of a comment or string) the lexer simply returns the token EOF.

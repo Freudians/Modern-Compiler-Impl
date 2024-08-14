@@ -1,0 +1,413 @@
+
+type token = 
+  | TIMES
+  | SEMICOLON
+  | RPAREN
+  | PRINT
+  | PLUS
+  | MINUS
+  | LPAREN
+  | INT of (
+# 8 "grammar.mly"
+      (int)
+# 14 "grammar__mock.ml.mock"
+)
+  | ID of (
+# 9 "grammar.mly"
+      (string)
+# 19 "grammar__mock.ml.mock"
+)
+  | EOF
+  | DIV
+  | COMMA
+  | ASSIGN
+
+# 1 "grammar.mly"
+  
+open Table_helper
+(*[transform_to_list f] converts a function f which is the form [table -> (table * int)] into a function f 
+of the form [table -> (table * int * int list)]. *)
+let transform_to_list f = let ()
+
+# 33 "grammar__mock.ml.mock"
+
+let menhir_begin_marker =
+  0
+
+and (xv_stm, xv_prog, xv_exps, xv_exp) =
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 30 "grammar.mly"
+                   _4
+# 42 "grammar__mock.ml.mock"
+   : unit) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) ((
+# 30 "grammar.mly"
+              _3
+# 46 "grammar__mock.ml.mock"
+   : 'tv_exps) : (
+# 15 "grammar.mly"
+      ((table * int list) -> (table * int list))
+# 50 "grammar__mock.ml.mock"
+  )) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 30 "grammar.mly"
+       _2
+# 54 "grammar__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 30 "grammar.mly"
+ _1
+# 58 "grammar__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 30 "grammar.mly"
+                           (fun t -> _3 t)
+# 63 "grammar__mock.ml.mock"
+     : 'tv_stm) : (
+# 14 "grammar.mly"
+     (table -> (table * int list))
+# 67 "grammar__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 29 "grammar.mly"
+           _3
+# 72 "grammar__mock.ml.mock"
+   : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 76 "grammar__mock.ml.mock"
+  )) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 29 "grammar.mly"
+    _2
+# 80 "grammar__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 29 "grammar.mly"
+ _1
+# 84 "grammar__mock.ml.mock"
+   : (
+# 9 "grammar.mly"
+      (string)
+# 88 "grammar__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 29 "grammar.mly"
+                (fun t -> update t _1 (let (_, v) = _3 t in v))
+# 93 "grammar__mock.ml.mock"
+     : 'tv_stm) : (
+# 14 "grammar.mly"
+     (table -> (table * int list))
+# 97 "grammar__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 28 "grammar.mly"
+               _3
+# 102 "grammar__mock.ml.mock"
+   : 'tv_stm) : (
+# 14 "grammar.mly"
+     (table -> (table * int list))
+# 106 "grammar__mock.ml.mock"
+  )) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 28 "grammar.mly"
+     _2
+# 110 "grammar__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 28 "grammar.mly"
+ _1
+# 114 "grammar__mock.ml.mock"
+   : 'tv_stm) : (
+# 14 "grammar.mly"
+     (table -> (table * int list))
+# 118 "grammar__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 28 "grammar.mly"
+                    (fun t -> let (ti, int1) = _1 t in let (tf, int2) = _3 ti in (tf, int1 @ int2))
+# 123 "grammar__mock.ml.mock"
+     : 'tv_stm) : (
+# 14 "grammar.mly"
+     (table -> (table * int list))
+# 127 "grammar__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 24 "grammar.mly"
+     _2
+# 132 "grammar__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 24 "grammar.mly"
+ _1
+# 136 "grammar__mock.ml.mock"
+   : 'tv_stm) : (
+# 14 "grammar.mly"
+     (table -> (table * int list))
+# 140 "grammar__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 24 "grammar.mly"
+          (_1(emptytable))
+# 145 "grammar__mock.ml.mock"
+     : 'tv_prog) : (
+# 16 "grammar.mly"
+      (table)
+# 149 "grammar__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 34 "grammar.mly"
+            _3
+# 154 "grammar__mock.ml.mock"
+   : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 158 "grammar__mock.ml.mock"
+  )) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 34 "grammar.mly"
+      _2
+# 162 "grammar__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 34 "grammar.mly"
+ _1
+# 166 "grammar__mock.ml.mock"
+   : 'tv_exps) : (
+# 15 "grammar.mly"
+      ((table * int list) -> (table * int list))
+# 170 "grammar__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 34 "grammar.mly"
+                 (fun (t,lst) -> ( let (tn, i_list) = _1 (t,lst) in let (ta, v, other_lst) = _3 (tn, i_lst) in  (ta, v :: other_lst)))
+# 175 "grammar__mock.ml.mock"
+     : 'tv_exps) : (
+# 15 "grammar.mly"
+      ((table * int list) -> (table * int list))
+# 179 "grammar__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 33 "grammar.mly"
+ _1
+# 184 "grammar__mock.ml.mock"
+   : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 188 "grammar__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 33 "grammar.mly"
+      (fun (t,lst) -> let (ta, v, flst) = _1 (t,lst) in (ta, flst))
+# 193 "grammar__mock.ml.mock"
+     : 'tv_exps) : (
+# 15 "grammar.mly"
+      ((table * int list) -> (table * int list))
+# 197 "grammar__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 45 "grammar.mly"
+            _3
+# 202 "grammar__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) ((
+# 45 "grammar.mly"
+        _2
+# 206 "grammar__mock.ml.mock"
+   : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 210 "grammar__mock.ml.mock"
+  )) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 45 "grammar.mly"
+ _1
+# 214 "grammar__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 45 "grammar.mly"
+                    ( _2 )
+# 219 "grammar__mock.ml.mock"
+     : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 223 "grammar__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 44 "grammar.mly"
+           _3
+# 228 "grammar__mock.ml.mock"
+   : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 232 "grammar__mock.ml.mock"
+  )) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 44 "grammar.mly"
+     _2
+# 236 "grammar__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 44 "grammar.mly"
+ _1
+# 240 "grammar__mock.ml.mock"
+   : 'tv_stm) : (
+# 14 "grammar.mly"
+     (table -> (table * int list))
+# 244 "grammar__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 44 "grammar.mly"
+                (fun t lst -> let (tf, l) = _1 t in _3(tf, l))
+# 249 "grammar__mock.ml.mock"
+     : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 253 "grammar__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 43 "grammar.mly"
+         _3
+# 258 "grammar__mock.ml.mock"
+   : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 262 "grammar__mock.ml.mock"
+  )) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 43 "grammar.mly"
+     _2
+# 266 "grammar__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 43 "grammar.mly"
+ _1
+# 270 "grammar__mock.ml.mock"
+   : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 274 "grammar__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 43 "grammar.mly"
+              (unpack _1 ( / ) _3)
+# 279 "grammar__mock.ml.mock"
+     : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 283 "grammar__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 42 "grammar.mly"
+           _3
+# 288 "grammar__mock.ml.mock"
+   : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 292 "grammar__mock.ml.mock"
+  )) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 42 "grammar.mly"
+     _2
+# 296 "grammar__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 42 "grammar.mly"
+ _1
+# 300 "grammar__mock.ml.mock"
+   : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 304 "grammar__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 42 "grammar.mly"
+                (unpack _1 ( * ) _3)
+# 309 "grammar__mock.ml.mock"
+     : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 313 "grammar__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 41 "grammar.mly"
+           _3
+# 318 "grammar__mock.ml.mock"
+   : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 322 "grammar__mock.ml.mock"
+  )) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 41 "grammar.mly"
+     _2
+# 326 "grammar__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 41 "grammar.mly"
+ _1
+# 330 "grammar__mock.ml.mock"
+   : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 334 "grammar__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 41 "grammar.mly"
+                (unpack _1 ( - ) _3)
+# 339 "grammar__mock.ml.mock"
+     : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 343 "grammar__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 39 "grammar.mly"
+          _3
+# 348 "grammar__mock.ml.mock"
+   : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 352 "grammar__mock.ml.mock"
+  )) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 39 "grammar.mly"
+     _2
+# 356 "grammar__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 39 "grammar.mly"
+ _1
+# 360 "grammar__mock.ml.mock"
+   : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 364 "grammar__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 40 "grammar.mly"
+(unpack _1 ( + ) _3)
+# 369 "grammar__mock.ml.mock"
+     : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 373 "grammar__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 38 "grammar.mly"
+ _1
+# 378 "grammar__mock.ml.mock"
+   : (
+# 9 "grammar.mly"
+      (string)
+# 382 "grammar__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 38 "grammar.mly"
+     (fun (t, lst) -> (t, t _1, lst))
+# 387 "grammar__mock.ml.mock"
+     : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 391 "grammar__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 37 "grammar.mly"
+ _1
+# 396 "grammar__mock.ml.mock"
+   : (
+# 8 "grammar.mly"
+      (int)
+# 400 "grammar__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 37 "grammar.mly"
+      (fun (t, lst) -> (t, _1, lst))
+# 405 "grammar__mock.ml.mock"
+     : 'tv_exp) : (
+# 13 "grammar.mly"
+     ((table * int list) -> (table * int * int list))
+# 409 "grammar__mock.ml.mock"
+    )) in
+  ((let rec diverge() = diverge() in diverge()) : 'tv_stm * 'tv_prog * 'tv_exps * 'tv_exp)
+
+and menhir_end_marker =
+  0

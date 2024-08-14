@@ -1,0 +1,23 @@
+# dune build
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/anthonydu/.cache/dune/db
+# Workspace root: /home/anthonydu/appel/chap4/exercise_program
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /home/anthonydu/.opam/default/bin/ocamlc.opt -config > /tmp/dune_f7f328_output
+$ (cd _build/.sandbox/da9129c376b9946e5ead33c6d7210468/default && /home/anthonydu/.opam/default/bin/menhir grammar.mly --base grammar --infer-write-query grammar__mock.ml.mock)
+$ (cd _build/default && /home/anthonydu/.opam/default/bin/ocamldep.opt -modules -impl grammar__mock.ml.mock) > _build/default/.test.objs/grammar__mock.impl.d
+> File "grammar__mock.ml.mock", line 34, characters 0-3:
+> 34 | let menhir_begin_marker =
+>      ^^^
+> Error: Syntax error
+[2]

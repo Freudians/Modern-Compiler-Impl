@@ -1,0 +1,29 @@
+
+** Conflict (shift/reduce) in state 12.
+** Tokens involved: TIMES PLUS MINUS DIV
+** The following explanations concentrate on token TIMES.
+** This state is reached from prog after reading:
+
+PRINT LPAREN stm COMMA exp
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+prog 
+stm EOF 
+PRINT LPAREN exps RPAREN 
+             exp 
+             (?)
+
+** In state 12, looking ahead at TIMES, shifting is permitted
+** because of the following sub-derivation:
+
+stm COMMA exp 
+          exp . TIMES exp 
+
+** In state 12, looking ahead at TIMES, reducing production
+** exp -> stm COMMA exp
+** is permitted because of the following sub-derivation:
+
+exp TIMES exp // lookahead token appears
+stm COMMA exp . 
