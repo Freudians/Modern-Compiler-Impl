@@ -1,4 +1,4 @@
-  type pos = int
+  type pos = Lexing.position
   type symbol = Symbol.t
 
   type var =
@@ -16,7 +16,7 @@
     | RecordExp of { fields : (symbol * exp * pos) list; typ : symbol; pos : pos }
     | SeqExp of (exp * pos) list
     | AssignExp of { var : var; exp : exp; pos : pos }
-    | IfExp of { test : exp; then' : exp; else' : exp option; pos : pos }
+    | IfExp of { test : exp; then_ : exp; else_ : exp option; pos : pos }
     | WhileExp of { test : exp; body : exp; pos : pos }
     | ForExp of { var : symbol; escape : bool ref; lo : exp; hi : exp; body : exp; pos : pos }
     | BreakExp of pos

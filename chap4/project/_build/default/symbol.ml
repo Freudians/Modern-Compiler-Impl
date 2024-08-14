@@ -1,7 +1,7 @@
   type t = string * int
   module H = Hashtbl
 
-  exception Symbol
+  (*exception Symbol*)
   let nextsym = ref 0
   let size_hint = 128
   let hashtable = H.create size_hint

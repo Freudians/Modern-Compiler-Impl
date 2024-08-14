@@ -78,16 +78,16 @@ exp:
   | IF exp THEN exp ELSE exp { 
     IfExp {
       test = $2;
-      then' = $4;
-      else' = Some $6;
+      then_ = $4;
+      else_ = Some $6;
       pos = $startpos
     }
   }
   | IF exp THEN exp { 
     IfExp {
       test = $2;
-      then' = $4;
-      else' = None;
+      then_ = $4;
+      else_ = None;
       pos = $startpos
     }
   }
@@ -118,9 +118,6 @@ exp:
       pos = $startpos
     }
   } 
-  | ID { 
-    VarExp (SimpleVar (Symbol.symbol $1, $startpos))
-  }
   | INT { 
     IntExp ($1)
   }
@@ -139,7 +136,7 @@ exp:
 stmt:
   | ID ASSIGN exp { 
     AssignExp {
-      var = Symbol.symbol $1;
+      var = SimpleVar(Symbol.symbol $1, $startpos);
       exp = $3;
       pos = $startpos;
     }
@@ -215,50 +212,61 @@ comp:
     }
   }
   | exp LE exp { 
+    OpExp {
     left = $1;
     oper = LeOp;
     right = $3;
     pos = $startpos
+    }
   }
   | exp GE exp { 
+        OpExp {
     left = $1;
     oper = GeOp;
     right = $3;
-    pos = $startpos
+    pos = $startpos }
   }
   | exp GT exp { 
+    OpExp {
     left = $1;
     oper = GtOp;
     right = $3;
     pos = $startpos
+    }
   }
   | exp LT exp { 
+    OpExp {
     left = $1;
     oper = LtOp;
     right = $3;
     pos = $startpos
+    }
   }
   | exp NEQ exp { 
+    OpExp {
     left = $1;
     oper = NeqOp;
     right = $3;
     pos = $startpos
+    }
   }
 bool:
   | exp AND exp { 
     IfExp
     {
       test = $1;
-      then' = $3;
-      else' = Some (IntExp 0)
+      then_ = $3;
+      else_ = Some (IntExp 0);
+      pos = $startpos
     }
   }
   | exp OR exp { 
     IfExp
     {
       test = $1;
-      then' = Some (IntExp 1);
-      else' = $3
+      then_ = (IntExp 1);
+      else_ = Some ($3);
+      pos = $startpos
     }
   }
 expseq:
@@ -269,13 +277,22 @@ expseq:
     ($1, $startpos) :: $3
   }
 decs :
-  | dec decs { $1 :: $2}
+  | tydecs not_tydecs { TypeDec($1) :: $2}
+  | vardec decs { $1 :: $2}
+  | fundecs not_fundecs { FunctionDec($1) :: $2}
   | { [] }
-
+not_fundecs:
+  | tydecs not_tydecs { TypeDec($1) :: $2}
+  | vardec decs { $1 :: $2}
+  | { [] }
+not_tydecs:
+  | fundecs not_fundecs {FunctionDec($1) :: $2}
+  | vardec decs { $1 :: $2 }
+  | { [] }
 dec :
-  | tydec { TypeDec($1) }
+  | tydecs { TypeDec($1) }
   | vardec { $1 }
-  | fundec { $1 }
+  | fundecs { FunctionDec($1) }
 tydecs:
   | tydec tydecs { 
     $1 :: $2
@@ -297,25 +314,76 @@ ty :
   }
 
 tyfields :
-  | ID COLON type_id { }
-  | ID COLON type_id COMMA tyfields { }
-  | { }
+  | ID COLON type_id { 
+    [{name = Symbol.symbol $1; 
+    escape = ref true; 
+    typ = $3; 
+    pos = $startpos
+    }]
+  }
+  | ID COLON type_id COMMA tyfields { 
+    {name = Symbol.symbol $1; 
+    escape = ref true; 
+    typ = $3; 
+    pos = $startpos
+    } :: $5
+  }
+  | { [] }
 
 vardec :
-  | VAR ID ASSIGN exp { }
-  | VAR ID COLON type_id ASSIGN exp { }
-
+  | VAR ID ASSIGN exp { 
+    VarDec {
+      name = Symbol.symbol $2;
+      escape = ref true;
+      typ = None;
+      init = $4;
+      pos = $startpos
+    }
+  }
+  | VAR ID COLON type_id ASSIGN exp { 
+    VarDec {
+      name = Symbol.symbol $2;
+      escape = ref true;
+      typ = Some ($4, $startpos($4));
+      init = $6;
+      pos = $startpos
+    }
+  }
+fundecs:
+| fundec fundecs { $1 :: $2}
+| fundec { [$1] }
 fundec : 
-  | FUNCTION ID LPAREN tyfields RPAREN EQ exp { }
-  | FUNCTION ID LPAREN tyfields RPAREN COLON type_id EQ exp { }
+  | FUNCTION ID LPAREN tyfields RPAREN EQ exp { 
+    {name = Symbol.symbol $2;
+    params = $4;
+    result = None;
+    body = $7;
+    pos = $startpos
+    }
+  }
+  | FUNCTION ID LPAREN tyfields RPAREN COLON type_id EQ exp { 
+    {
+      name = Symbol.symbol $2;
+      params = $4;
+      result = Some ($7, $startpos($7));
+      body = $9;
+      pos = $startpos
+    }
+  }
 
 lvalue :
-  | ID DOT ID dot_id_helper{ }
-  | lvalue LBRACK exp RBRACK { }
-  | ID LBRACK exp RBRACK { }
-dot_id_helper:
-  | { }
-  | DOT ID { }
+  | ID { SimpleVar (Symbol.symbol $1, $startpos)}
+  | lvalue DOT ID { FieldVar($1, Symbol.symbol $3, $startpos)}
+  | lvalue LBRACK exp RBRACK { 
+    SubscriptVar ($1 , $3 , $startpos)
+  }
+  | ID LBRACK exp RBRACK { 
+    SubscriptVar(
+      SimpleVar(Symbol.symbol $1, $startpos),
+      $3 ,
+      $startpos
+    )
+  }
 type_id :
-  | ID { }
+  | ID { Symbol.symbol $1 }
 %%
