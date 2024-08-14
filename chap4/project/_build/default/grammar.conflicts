@@ -1,7 +1,6 @@
 
 ** Conflict (shift/reduce) in state 16.
-** Tokens involved: LBRACK ASSIGN
-** The following explanations concentrate on token LBRACK.
+** Token involved: LBRACK
 ** This state is reached from program after reading:
 
 ID

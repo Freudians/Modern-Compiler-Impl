@@ -68,23 +68,23 @@ let menhir_begin_marker =
 
 and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv_program, xv_not_tydecs, xv_not_fundecs, xv_lvalue, xv_idexpseq, xv_fundecs, xv_fundec, xv_funcexpseq, xv_expseq, xv_exp, xv_decs, xv_comp, xv_bool, xv_arith) =
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 343 "grammar.mly"
+# 337 "grammar.mly"
                                _6
 # 74 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__6_ : Lexing.position) (_endpos__6_ : Lexing.position) (_startofs__6_ : int) (_endofs__6_ : int) (_loc__6_ : Lexing.position * Lexing.position) (
-# 343 "grammar.mly"
+# 337 "grammar.mly"
                         _5
 # 78 "grammar__mock.ml.mock"
    : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
-# 343 "grammar.mly"
+# 337 "grammar.mly"
                 _4
 # 82 "grammar__mock.ml.mock"
    : 'tv_type_id) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
-# 343 "grammar.mly"
+# 337 "grammar.mly"
           _3
 # 86 "grammar__mock.ml.mock"
    : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 343 "grammar.mly"
+# 337 "grammar.mly"
        _2
 # 90 "grammar__mock.ml.mock"
    : (
@@ -92,12 +92,12 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
        (string)
 # 94 "grammar__mock.ml.mock"
   )) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 343 "grammar.mly"
+# 337 "grammar.mly"
    _1
 # 98 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 343 "grammar.mly"
+# 337 "grammar.mly"
                                     ( 
     VarDec {
       name = Symbol.symbol _2;
@@ -110,15 +110,15 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
 # 111 "grammar__mock.ml.mock"
      : 'tv_vardec) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 334 "grammar.mly"
+# 328 "grammar.mly"
                  _4
 # 116 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
-# 334 "grammar.mly"
+# 328 "grammar.mly"
           _3
 # 120 "grammar__mock.ml.mock"
    : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 334 "grammar.mly"
+# 328 "grammar.mly"
        _2
 # 124 "grammar__mock.ml.mock"
    : (
@@ -126,12 +126,12 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
        (string)
 # 128 "grammar__mock.ml.mock"
   )) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 334 "grammar.mly"
+# 328 "grammar.mly"
    _1
 # 132 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 334 "grammar.mly"
+# 328 "grammar.mly"
                       ( 
     VarDec {
       name = Symbol.symbol _2;
@@ -144,7 +144,7 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
 # 145 "grammar__mock.ml.mock"
      : 'tv_vardec) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 388 "grammar.mly"
+# 382 "grammar.mly"
    _1
 # 150 "grammar__mock.ml.mock"
    : (
@@ -153,34 +153,34 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
 # 154 "grammar__mock.ml.mock"
   )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 388 "grammar.mly"
+# 382 "grammar.mly"
        ( Symbol.symbol _1 )
 # 159 "grammar__mock.ml.mock"
      : 'tv_type_id) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ->
     (
-# 331 "grammar.mly"
+# 325 "grammar.mly"
     ( [] )
 # 165 "grammar__mock.ml.mock"
      : 'tv_tyfields) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 324 "grammar.mly"
+# 318 "grammar.mly"
                           _5
 # 170 "grammar__mock.ml.mock"
    : 'tv_tyfields) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
-# 324 "grammar.mly"
+# 318 "grammar.mly"
                     _4
 # 174 "grammar__mock.ml.mock"
    : unit) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
-# 324 "grammar.mly"
+# 318 "grammar.mly"
             _3
 # 178 "grammar__mock.ml.mock"
    : 'tv_type_id) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 324 "grammar.mly"
+# 318 "grammar.mly"
       _2
 # 182 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 324 "grammar.mly"
+# 318 "grammar.mly"
    _1
 # 186 "grammar__mock.ml.mock"
    : (
@@ -189,7 +189,7 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
 # 190 "grammar__mock.ml.mock"
   )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 324 "grammar.mly"
+# 318 "grammar.mly"
                                     ( 
     {name = Symbol.symbol _1; 
     escape = ref true; 
@@ -200,15 +200,15 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
 # 201 "grammar__mock.ml.mock"
      : 'tv_tyfields) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 317 "grammar.mly"
+# 311 "grammar.mly"
             _3
 # 206 "grammar__mock.ml.mock"
    : 'tv_type_id) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 317 "grammar.mly"
+# 311 "grammar.mly"
       _2
 # 210 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 317 "grammar.mly"
+# 311 "grammar.mly"
    _1
 # 214 "grammar__mock.ml.mock"
    : (
@@ -217,7 +217,7 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
 # 218 "grammar__mock.ml.mock"
   )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 317 "grammar.mly"
+# 311 "grammar.mly"
                      ( 
     [{name = Symbol.symbol _1; 
     escape = ref true; 
@@ -228,122 +228,122 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
 # 229 "grammar__mock.ml.mock"
      : 'tv_tyfields) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 300 "grammar.mly"
+# 294 "grammar.mly"
    _1
 # 234 "grammar__mock.ml.mock"
    : 'tv_tydec) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 300 "grammar.mly"
+# 294 "grammar.mly"
           ( [_1] )
 # 239 "grammar__mock.ml.mock"
      : 'tv_tydecs) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 297 "grammar.mly"
+# 291 "grammar.mly"
          _2
 # 244 "grammar__mock.ml.mock"
    : 'tv_tydecs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 297 "grammar.mly"
+# 291 "grammar.mly"
    _1
 # 248 "grammar__mock.ml.mock"
    : 'tv_tydec) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 297 "grammar.mly"
+# 291 "grammar.mly"
                  ( 
     _1 :: _2
   )
 # 255 "grammar__mock.ml.mock"
      : 'tv_tydecs) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 302 "grammar.mly"
+# 296 "grammar.mly"
                    _4
 # 260 "grammar__mock.ml.mock"
    : 'tv_ty) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
-# 302 "grammar.mly"
+# 296 "grammar.mly"
                 _3
 # 264 "grammar__mock.ml.mock"
    : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 302 "grammar.mly"
+# 296 "grammar.mly"
         _2
 # 268 "grammar__mock.ml.mock"
    : 'tv_type_id) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 302 "grammar.mly"
+# 296 "grammar.mly"
    _1
 # 272 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 302 "grammar.mly"
+# 296 "grammar.mly"
                        ( 
     {name= _2; ty = _4; pos = _startpos}
   )
 # 279 "grammar__mock.ml.mock"
      : 'tv_tydec) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 312 "grammar.mly"
+# 306 "grammar.mly"
             _3
 # 284 "grammar__mock.ml.mock"
    : 'tv_type_id) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 312 "grammar.mly"
+# 306 "grammar.mly"
          _2
 # 288 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 312 "grammar.mly"
+# 306 "grammar.mly"
    _1
 # 292 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 312 "grammar.mly"
+# 306 "grammar.mly"
                      ( 
     ArrayTy (_3 , _startpos)
   )
 # 299 "grammar__mock.ml.mock"
      : 'tv_ty) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 309 "grammar.mly"
+# 303 "grammar.mly"
                    _3
 # 304 "grammar__mock.ml.mock"
    : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 309 "grammar.mly"
+# 303 "grammar.mly"
           _2
 # 308 "grammar__mock.ml.mock"
    : 'tv_tyfields) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 309 "grammar.mly"
+# 303 "grammar.mly"
    _1
 # 312 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 309 "grammar.mly"
+# 303 "grammar.mly"
                            ( 
     RecordTy (_2)
   )
 # 319 "grammar__mock.ml.mock"
      : 'tv_ty) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 306 "grammar.mly"
+# 300 "grammar.mly"
    _1
 # 324 "grammar__mock.ml.mock"
    : 'tv_type_id) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 306 "grammar.mly"
+# 300 "grammar.mly"
             ( 
     NameTy (_1 , _startpos)
   )
 # 331 "grammar__mock.ml.mock"
      : 'tv_ty) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 144 "grammar.mly"
+# 138 "grammar.mly"
                  _3
 # 336 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 144 "grammar.mly"
+# 138 "grammar.mly"
           _2
 # 340 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 144 "grammar.mly"
+# 138 "grammar.mly"
    _1
 # 344 "grammar__mock.ml.mock"
    : 'tv_lvalue) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 144 "grammar.mly"
+# 138 "grammar.mly"
                       ( 
     AssignExp {
       var = _1;
@@ -354,142 +354,114 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
 # 355 "grammar__mock.ml.mock"
      : 'tv_stmt) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 137 "grammar.mly"
-             _3
-# 360 "grammar__mock.ml.mock"
-   : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 137 "grammar.mly"
-      _2
-# 364 "grammar__mock.ml.mock"
-   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 137 "grammar.mly"
-   _1
-# 368 "grammar__mock.ml.mock"
-   : (
-# 6 "grammar.mly"
-       (string)
-# 372 "grammar__mock.ml.mock"
-  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
-    (
-# 137 "grammar.mly"
-                  ( 
-    AssignExp {
-      var = SimpleVar(Symbol.symbol _1, _startpos);
-      exp = _3;
-      pos = _startpos;
-    }
-  )
-# 383 "grammar__mock.ml.mock"
-     : 'tv_stmt) in
-  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 40 "grammar.mly"
        _2
-# 388 "grammar__mock.ml.mock"
+# 360 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
 # 40 "grammar.mly"
    _1
-# 392 "grammar__mock.ml.mock"
+# 364 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     ((
 # 40 "grammar.mly"
             ( _1 )
-# 397 "grammar__mock.ml.mock"
+# 369 "grammar__mock.ml.mock"
      : 'tv_program) : (
 # 18 "grammar.mly"
       (Absyn.exp)
-# 401 "grammar__mock.ml.mock"
+# 373 "grammar__mock.ml.mock"
     )) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ->
     (
-# 291 "grammar.mly"
+# 285 "grammar.mly"
     ( [] )
-# 407 "grammar__mock.ml.mock"
+# 379 "grammar__mock.ml.mock"
      : 'tv_not_tydecs) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 290 "grammar.mly"
+# 284 "grammar.mly"
           _2
-# 412 "grammar__mock.ml.mock"
+# 384 "grammar__mock.ml.mock"
    : 'tv_decs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 290 "grammar.mly"
+# 284 "grammar.mly"
    _1
-# 416 "grammar__mock.ml.mock"
+# 388 "grammar__mock.ml.mock"
    : 'tv_vardec) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 290 "grammar.mly"
+# 284 "grammar.mly"
                 ( _1 :: _2 )
-# 421 "grammar__mock.ml.mock"
+# 393 "grammar__mock.ml.mock"
      : 'tv_not_tydecs) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 289 "grammar.mly"
+# 283 "grammar.mly"
            _2
-# 426 "grammar__mock.ml.mock"
+# 398 "grammar__mock.ml.mock"
    : 'tv_not_fundecs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 289 "grammar.mly"
+# 283 "grammar.mly"
    _1
-# 430 "grammar__mock.ml.mock"
+# 402 "grammar__mock.ml.mock"
    : 'tv_fundecs) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 289 "grammar.mly"
+# 283 "grammar.mly"
                         (FunctionDec(_1) :: _2)
-# 435 "grammar__mock.ml.mock"
+# 407 "grammar__mock.ml.mock"
      : 'tv_not_tydecs) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ->
     (
-# 287 "grammar.mly"
+# 281 "grammar.mly"
     ( [] )
+# 413 "grammar__mock.ml.mock"
+     : 'tv_not_fundecs) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 280 "grammar.mly"
+          _2
+# 418 "grammar__mock.ml.mock"
+   : 'tv_decs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 280 "grammar.mly"
+   _1
+# 422 "grammar__mock.ml.mock"
+   : 'tv_vardec) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 280 "grammar.mly"
+                ( _1 :: _2)
+# 427 "grammar__mock.ml.mock"
+     : 'tv_not_fundecs) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 279 "grammar.mly"
+          _2
+# 432 "grammar__mock.ml.mock"
+   : 'tv_not_tydecs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 279 "grammar.mly"
+   _1
+# 436 "grammar__mock.ml.mock"
+   : 'tv_tydecs) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 279 "grammar.mly"
+                      ( TypeDec(_1) :: _2)
 # 441 "grammar__mock.ml.mock"
      : 'tv_not_fundecs) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 286 "grammar.mly"
-          _2
-# 446 "grammar__mock.ml.mock"
-   : 'tv_decs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 286 "grammar.mly"
-   _1
-# 450 "grammar__mock.ml.mock"
-   : 'tv_vardec) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
-    (
-# 286 "grammar.mly"
-                ( _1 :: _2)
-# 455 "grammar__mock.ml.mock"
-     : 'tv_not_fundecs) in
-  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 285 "grammar.mly"
-          _2
-# 460 "grammar__mock.ml.mock"
-   : 'tv_not_tydecs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 285 "grammar.mly"
-   _1
-# 464 "grammar__mock.ml.mock"
-   : 'tv_tydecs) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
-    (
-# 285 "grammar.mly"
-                      ( TypeDec(_1) :: _2)
-# 469 "grammar__mock.ml.mock"
-     : 'tv_not_fundecs) in
-  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 380 "grammar.mly"
+# 374 "grammar.mly"
                  _4
-# 474 "grammar__mock.ml.mock"
+# 446 "grammar__mock.ml.mock"
    : unit) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
-# 380 "grammar.mly"
+# 374 "grammar.mly"
              _3
-# 478 "grammar__mock.ml.mock"
+# 450 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 380 "grammar.mly"
+# 374 "grammar.mly"
       _2
-# 482 "grammar__mock.ml.mock"
+# 454 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 380 "grammar.mly"
+# 374 "grammar.mly"
    _1
-# 486 "grammar__mock.ml.mock"
+# 458 "grammar__mock.ml.mock"
    : (
 # 6 "grammar.mly"
        (string)
-# 490 "grammar__mock.ml.mock"
+# 462 "grammar__mock.ml.mock"
   )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 380 "grammar.mly"
+# 374 "grammar.mly"
                          ( 
     SubscriptVar(
       SimpleVar(Symbol.symbol _1, _startpos),
@@ -497,191 +469,191 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       _startpos
     )
   )
-# 501 "grammar__mock.ml.mock"
+# 473 "grammar__mock.ml.mock"
      : 'tv_lvalue) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 377 "grammar.mly"
+# 371 "grammar.mly"
                      _4
-# 506 "grammar__mock.ml.mock"
+# 478 "grammar__mock.ml.mock"
    : unit) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
-# 377 "grammar.mly"
+# 371 "grammar.mly"
                  _3
-# 510 "grammar__mock.ml.mock"
+# 482 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 377 "grammar.mly"
+# 371 "grammar.mly"
           _2
-# 514 "grammar__mock.ml.mock"
+# 486 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 377 "grammar.mly"
+# 371 "grammar.mly"
    _1
-# 518 "grammar__mock.ml.mock"
+# 490 "grammar__mock.ml.mock"
    : 'tv_lvalue) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 377 "grammar.mly"
+# 371 "grammar.mly"
                              ( 
     SubscriptVar (_1 , _3 , _startpos)
   )
-# 525 "grammar__mock.ml.mock"
+# 497 "grammar__mock.ml.mock"
      : 'tv_lvalue) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 376 "grammar.mly"
+# 370 "grammar.mly"
               _3
-# 530 "grammar__mock.ml.mock"
+# 502 "grammar__mock.ml.mock"
    : (
 # 6 "grammar.mly"
        (string)
-# 534 "grammar__mock.ml.mock"
+# 506 "grammar__mock.ml.mock"
   )) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 376 "grammar.mly"
+# 370 "grammar.mly"
           _2
-# 538 "grammar__mock.ml.mock"
+# 510 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 376 "grammar.mly"
+# 370 "grammar.mly"
    _1
-# 542 "grammar__mock.ml.mock"
+# 514 "grammar__mock.ml.mock"
    : 'tv_lvalue) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 376 "grammar.mly"
+# 370 "grammar.mly"
                   ( FieldVar(_1, Symbol.symbol _3, _startpos))
-# 547 "grammar__mock.ml.mock"
+# 519 "grammar__mock.ml.mock"
      : 'tv_lvalue) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 375 "grammar.mly"
+# 369 "grammar.mly"
    _1
-# 552 "grammar__mock.ml.mock"
+# 524 "grammar__mock.ml.mock"
    : (
 # 6 "grammar.mly"
        (string)
-# 556 "grammar__mock.ml.mock"
+# 528 "grammar__mock.ml.mock"
   )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 375 "grammar.mly"
+# 369 "grammar.mly"
        ( SimpleVar (Symbol.symbol _1, _startpos))
-# 561 "grammar__mock.ml.mock"
+# 533 "grammar__mock.ml.mock"
      : 'tv_lvalue) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 160 "grammar.mly"
+# 154 "grammar.mly"
                    _5
-# 566 "grammar__mock.ml.mock"
+# 538 "grammar__mock.ml.mock"
    : 'tv_idexpseq) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
-# 160 "grammar.mly"
+# 154 "grammar.mly"
              _4
-# 570 "grammar__mock.ml.mock"
+# 542 "grammar__mock.ml.mock"
    : unit) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
-# 160 "grammar.mly"
+# 154 "grammar.mly"
          _3
-# 574 "grammar__mock.ml.mock"
+# 546 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 160 "grammar.mly"
+# 154 "grammar.mly"
       _2
-# 578 "grammar__mock.ml.mock"
+# 550 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 160 "grammar.mly"
+# 154 "grammar.mly"
    _1
-# 582 "grammar__mock.ml.mock"
+# 554 "grammar__mock.ml.mock"
    : (
 # 6 "grammar.mly"
        (string)
-# 586 "grammar__mock.ml.mock"
+# 558 "grammar__mock.ml.mock"
   )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 160 "grammar.mly"
+# 154 "grammar.mly"
                              ( 
     (Symbol.symbol _1, _3, _startpos) :: _5
   )
-# 593 "grammar__mock.ml.mock"
+# 565 "grammar__mock.ml.mock"
      : 'tv_idexpseq) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 157 "grammar.mly"
+# 151 "grammar.mly"
          _3
-# 598 "grammar__mock.ml.mock"
+# 570 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 157 "grammar.mly"
+# 151 "grammar.mly"
       _2
-# 602 "grammar__mock.ml.mock"
+# 574 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 157 "grammar.mly"
+# 151 "grammar.mly"
    _1
-# 606 "grammar__mock.ml.mock"
+# 578 "grammar__mock.ml.mock"
    : (
 # 6 "grammar.mly"
        (string)
-# 610 "grammar__mock.ml.mock"
+# 582 "grammar__mock.ml.mock"
   )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 157 "grammar.mly"
+# 151 "grammar.mly"
               ( 
     [(Symbol.symbol _1, _3, _startpos)]
   )
-# 617 "grammar__mock.ml.mock"
+# 589 "grammar__mock.ml.mock"
      : 'tv_idexpseq) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 354 "grammar.mly"
+# 348 "grammar.mly"
  _1
-# 622 "grammar__mock.ml.mock"
+# 594 "grammar__mock.ml.mock"
    : 'tv_fundec) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 354 "grammar.mly"
+# 348 "grammar.mly"
          ( [_1] )
-# 627 "grammar__mock.ml.mock"
+# 599 "grammar__mock.ml.mock"
      : 'tv_fundecs) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 353 "grammar.mly"
+# 347 "grammar.mly"
         _2
-# 632 "grammar__mock.ml.mock"
+# 604 "grammar__mock.ml.mock"
    : 'tv_fundecs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 353 "grammar.mly"
+# 347 "grammar.mly"
  _1
-# 636 "grammar__mock.ml.mock"
+# 608 "grammar__mock.ml.mock"
    : 'tv_fundec) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 353 "grammar.mly"
+# 347 "grammar.mly"
                  ( _1 :: _2)
-# 641 "grammar__mock.ml.mock"
+# 613 "grammar__mock.ml.mock"
      : 'tv_fundecs) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 364 "grammar.mly"
+# 358 "grammar.mly"
                                                        _9
-# 646 "grammar__mock.ml.mock"
+# 618 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__9_ : Lexing.position) (_endpos__9_ : Lexing.position) (_startofs__9_ : int) (_endofs__9_ : int) (_loc__9_ : Lexing.position * Lexing.position) (
-# 364 "grammar.mly"
+# 358 "grammar.mly"
                                                     _8
-# 650 "grammar__mock.ml.mock"
+# 622 "grammar__mock.ml.mock"
    : unit) (_startpos__8_ : Lexing.position) (_endpos__8_ : Lexing.position) (_startofs__8_ : int) (_endofs__8_ : int) (_loc__8_ : Lexing.position * Lexing.position) (
-# 364 "grammar.mly"
+# 358 "grammar.mly"
                                             _7
-# 654 "grammar__mock.ml.mock"
+# 626 "grammar__mock.ml.mock"
    : 'tv_type_id) (_startpos__7_ : Lexing.position) (_endpos__7_ : Lexing.position) (_startofs__7_ : int) (_endofs__7_ : int) (_loc__7_ : Lexing.position * Lexing.position) (
-# 364 "grammar.mly"
+# 358 "grammar.mly"
                                       _6
-# 658 "grammar__mock.ml.mock"
+# 630 "grammar__mock.ml.mock"
    : unit) (_startpos__6_ : Lexing.position) (_endpos__6_ : Lexing.position) (_startofs__6_ : int) (_endofs__6_ : int) (_loc__6_ : Lexing.position * Lexing.position) (
-# 364 "grammar.mly"
+# 358 "grammar.mly"
                                _5
-# 662 "grammar__mock.ml.mock"
+# 634 "grammar__mock.ml.mock"
    : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
-# 364 "grammar.mly"
+# 358 "grammar.mly"
                       _4
-# 666 "grammar__mock.ml.mock"
+# 638 "grammar__mock.ml.mock"
    : 'tv_tyfields) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
-# 364 "grammar.mly"
+# 358 "grammar.mly"
                _3
-# 670 "grammar__mock.ml.mock"
+# 642 "grammar__mock.ml.mock"
    : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 364 "grammar.mly"
+# 358 "grammar.mly"
             _2
-# 674 "grammar__mock.ml.mock"
+# 646 "grammar__mock.ml.mock"
    : (
 # 6 "grammar.mly"
        (string)
-# 678 "grammar__mock.ml.mock"
+# 650 "grammar__mock.ml.mock"
   )) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 364 "grammar.mly"
+# 358 "grammar.mly"
    _1
-# 682 "grammar__mock.ml.mock"
+# 654 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 364 "grammar.mly"
+# 358 "grammar.mly"
                                                             ( 
     {
       name = Symbol.symbol _2;
@@ -691,43 +663,43 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       pos = _startpos
     }
   )
-# 695 "grammar__mock.ml.mock"
+# 667 "grammar__mock.ml.mock"
      : 'tv_fundec) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 356 "grammar.mly"
+# 350 "grammar.mly"
                                          _7
-# 700 "grammar__mock.ml.mock"
+# 672 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__7_ : Lexing.position) (_endpos__7_ : Lexing.position) (_startofs__7_ : int) (_endofs__7_ : int) (_loc__7_ : Lexing.position * Lexing.position) (
-# 356 "grammar.mly"
+# 350 "grammar.mly"
                                       _6
-# 704 "grammar__mock.ml.mock"
+# 676 "grammar__mock.ml.mock"
    : unit) (_startpos__6_ : Lexing.position) (_endpos__6_ : Lexing.position) (_startofs__6_ : int) (_endofs__6_ : int) (_loc__6_ : Lexing.position * Lexing.position) (
-# 356 "grammar.mly"
+# 350 "grammar.mly"
                                _5
-# 708 "grammar__mock.ml.mock"
+# 680 "grammar__mock.ml.mock"
    : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
-# 356 "grammar.mly"
+# 350 "grammar.mly"
                       _4
-# 712 "grammar__mock.ml.mock"
+# 684 "grammar__mock.ml.mock"
    : 'tv_tyfields) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
-# 356 "grammar.mly"
+# 350 "grammar.mly"
                _3
-# 716 "grammar__mock.ml.mock"
+# 688 "grammar__mock.ml.mock"
    : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 356 "grammar.mly"
+# 350 "grammar.mly"
             _2
-# 720 "grammar__mock.ml.mock"
+# 692 "grammar__mock.ml.mock"
    : (
 # 6 "grammar.mly"
        (string)
-# 724 "grammar__mock.ml.mock"
+# 696 "grammar__mock.ml.mock"
   )) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 356 "grammar.mly"
+# 350 "grammar.mly"
    _1
-# 728 "grammar__mock.ml.mock"
+# 700 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 356 "grammar.mly"
+# 350 "grammar.mly"
                                               ( 
     {name = Symbol.symbol _2;
     params = _4;
@@ -736,162 +708,162 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
     pos = _startpos
     }
   )
-# 740 "grammar__mock.ml.mock"
+# 712 "grammar__mock.ml.mock"
      : 'tv_fundec) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 155 "grammar.mly"
+# 149 "grammar.mly"
              _3
-# 745 "grammar__mock.ml.mock"
+# 717 "grammar__mock.ml.mock"
    : 'tv_funcexpseq) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 155 "grammar.mly"
+# 149 "grammar.mly"
        _2
-# 749 "grammar__mock.ml.mock"
+# 721 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 155 "grammar.mly"
+# 149 "grammar.mly"
    _1
-# 753 "grammar__mock.ml.mock"
+# 725 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 155 "grammar.mly"
+# 149 "grammar.mly"
                          ( _1 :: _3 )
-# 758 "grammar__mock.ml.mock"
+# 730 "grammar__mock.ml.mock"
      : 'tv_funcexpseq) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 152 "grammar.mly"
+# 146 "grammar.mly"
    _1
-# 763 "grammar__mock.ml.mock"
+# 735 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 152 "grammar.mly"
+# 146 "grammar.mly"
         ( 
     [_1]
   )
-# 770 "grammar__mock.ml.mock"
+# 742 "grammar__mock.ml.mock"
      : 'tv_funcexpseq) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 276 "grammar.mly"
+# 270 "grammar.mly"
                  _3
-# 775 "grammar__mock.ml.mock"
+# 747 "grammar__mock.ml.mock"
    : 'tv_expseq) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 276 "grammar.mly"
+# 270 "grammar.mly"
        _2
-# 779 "grammar__mock.ml.mock"
+# 751 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 276 "grammar.mly"
+# 270 "grammar.mly"
    _1
-# 783 "grammar__mock.ml.mock"
+# 755 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 276 "grammar.mly"
+# 270 "grammar.mly"
                          ( 
     (_1, _startpos) :: _3
   )
-# 790 "grammar__mock.ml.mock"
+# 762 "grammar__mock.ml.mock"
      : 'tv_expseq) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 273 "grammar.mly"
+# 267 "grammar.mly"
    _1
-# 795 "grammar__mock.ml.mock"
+# 767 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 273 "grammar.mly"
+# 267 "grammar.mly"
         ( 
     [(_1, _startpos)]
   )
-# 802 "grammar__mock.ml.mock"
+# 774 "grammar__mock.ml.mock"
      : 'tv_expseq) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 133 "grammar.mly"
           _2
-# 807 "grammar__mock.ml.mock"
+# 779 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
 # 133 "grammar.mly"
    _1
-# 811 "grammar__mock.ml.mock"
+# 783 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 133 "grammar.mly"
                   ( 
     NilExp
   )
-# 818 "grammar__mock.ml.mock"
+# 790 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 130 "grammar.mly"
    _1
-# 823 "grammar__mock.ml.mock"
+# 795 "grammar__mock.ml.mock"
    : 'tv_stmt) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 130 "grammar.mly"
          ( 
     _1
   )
-# 830 "grammar__mock.ml.mock"
+# 802 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 127 "grammar.mly"
    _1
-# 835 "grammar__mock.ml.mock"
+# 807 "grammar__mock.ml.mock"
    : 'tv_lvalue) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 127 "grammar.mly"
            ( 
     VarExp(_1)
   )
-# 842 "grammar__mock.ml.mock"
+# 814 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 124 "grammar.mly"
    _1
-# 847 "grammar__mock.ml.mock"
+# 819 "grammar__mock.ml.mock"
    : (
 # 8 "grammar.mly"
        (string)
-# 851 "grammar__mock.ml.mock"
+# 823 "grammar__mock.ml.mock"
   )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 124 "grammar.mly"
            ( 
     StringExp (_1, _startpos)
   )
-# 858 "grammar__mock.ml.mock"
+# 830 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 121 "grammar.mly"
    _1
-# 863 "grammar__mock.ml.mock"
+# 835 "grammar__mock.ml.mock"
    : (
 # 7 "grammar.mly"
        (int)
-# 867 "grammar__mock.ml.mock"
+# 839 "grammar__mock.ml.mock"
   )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 121 "grammar.mly"
         ( 
     IntExp (_1)
   )
-# 874 "grammar__mock.ml.mock"
+# 846 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 114 "grammar.mly"
                       _5
-# 879 "grammar__mock.ml.mock"
+# 851 "grammar__mock.ml.mock"
    : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
 # 114 "grammar.mly"
                _4
-# 883 "grammar__mock.ml.mock"
+# 855 "grammar__mock.ml.mock"
    : 'tv_expseq) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
 # 114 "grammar.mly"
             _3
-# 887 "grammar__mock.ml.mock"
+# 859 "grammar__mock.ml.mock"
    : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
 # 114 "grammar.mly"
        _2
-# 891 "grammar__mock.ml.mock"
+# 863 "grammar__mock.ml.mock"
    : 'tv_decs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
 # 114 "grammar.mly"
    _1
-# 895 "grammar__mock.ml.mock"
+# 867 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 114 "grammar.mly"
@@ -902,56 +874,56 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       pos = _startpos
     }
   )
-# 906 "grammar__mock.ml.mock"
+# 878 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 111 "grammar.mly"
    _1
-# 911 "grammar__mock.ml.mock"
+# 883 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 111 "grammar.mly"
           ( 
     BreakExp (_startpos)
   )
-# 918 "grammar__mock.ml.mock"
+# 890 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 101 "grammar.mly"
                                _8
-# 923 "grammar__mock.ml.mock"
+# 895 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__8_ : Lexing.position) (_endpos__8_ : Lexing.position) (_startofs__8_ : int) (_endofs__8_ : int) (_loc__8_ : Lexing.position * Lexing.position) (
 # 101 "grammar.mly"
                             _7
-# 927 "grammar__mock.ml.mock"
+# 899 "grammar__mock.ml.mock"
    : unit) (_startpos__7_ : Lexing.position) (_endpos__7_ : Lexing.position) (_startofs__7_ : int) (_endofs__7_ : int) (_loc__7_ : Lexing.position * Lexing.position) (
 # 101 "grammar.mly"
                         _6
-# 931 "grammar__mock.ml.mock"
+# 903 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__6_ : Lexing.position) (_endpos__6_ : Lexing.position) (_startofs__6_ : int) (_endofs__6_ : int) (_loc__6_ : Lexing.position * Lexing.position) (
 # 101 "grammar.mly"
                      _5
-# 935 "grammar__mock.ml.mock"
+# 907 "grammar__mock.ml.mock"
    : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
 # 101 "grammar.mly"
                  _4
-# 939 "grammar__mock.ml.mock"
+# 911 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
 # 101 "grammar.mly"
           _3
-# 943 "grammar__mock.ml.mock"
+# 915 "grammar__mock.ml.mock"
    : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
 # 101 "grammar.mly"
        _2
-# 947 "grammar__mock.ml.mock"
+# 919 "grammar__mock.ml.mock"
    : (
 # 6 "grammar.mly"
        (string)
-# 951 "grammar__mock.ml.mock"
+# 923 "grammar__mock.ml.mock"
   )) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
 # 101 "grammar.mly"
    _1
-# 955 "grammar__mock.ml.mock"
+# 927 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 101 "grammar.mly"
@@ -965,24 +937,24 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       pos = _startpos
     }
   )
-# 969 "grammar__mock.ml.mock"
+# 941 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 94 "grammar.mly"
                 _4
-# 974 "grammar__mock.ml.mock"
+# 946 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
 # 94 "grammar.mly"
              _3
-# 978 "grammar__mock.ml.mock"
+# 950 "grammar__mock.ml.mock"
    : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
 # 94 "grammar.mly"
          _2
-# 982 "grammar__mock.ml.mock"
+# 954 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
 # 94 "grammar.mly"
    _1
-# 986 "grammar__mock.ml.mock"
+# 958 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 94 "grammar.mly"
@@ -993,24 +965,24 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       pos = _startpos
     }
   )
-# 997 "grammar__mock.ml.mock"
+# 969 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 86 "grammar.mly"
                _4
-# 1002 "grammar__mock.ml.mock"
+# 974 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
 # 86 "grammar.mly"
           _3
-# 1006 "grammar__mock.ml.mock"
+# 978 "grammar__mock.ml.mock"
    : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
 # 86 "grammar.mly"
       _2
-# 1010 "grammar__mock.ml.mock"
+# 982 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
 # 86 "grammar.mly"
    _1
-# 1014 "grammar__mock.ml.mock"
+# 986 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 86 "grammar.mly"
@@ -1022,32 +994,32 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       pos = _startpos
     }
   )
-# 1026 "grammar__mock.ml.mock"
+# 998 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 78 "grammar.mly"
                         _6
-# 1031 "grammar__mock.ml.mock"
+# 1003 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__6_ : Lexing.position) (_endpos__6_ : Lexing.position) (_startofs__6_ : int) (_endofs__6_ : int) (_loc__6_ : Lexing.position * Lexing.position) (
 # 78 "grammar.mly"
                    _5
-# 1035 "grammar__mock.ml.mock"
+# 1007 "grammar__mock.ml.mock"
    : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
 # 78 "grammar.mly"
                _4
-# 1039 "grammar__mock.ml.mock"
+# 1011 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
 # 78 "grammar.mly"
           _3
-# 1043 "grammar__mock.ml.mock"
+# 1015 "grammar__mock.ml.mock"
    : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
 # 78 "grammar.mly"
       _2
-# 1047 "grammar__mock.ml.mock"
+# 1019 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
 # 78 "grammar.mly"
    _1
-# 1051 "grammar__mock.ml.mock"
+# 1023 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 78 "grammar.mly"
@@ -1059,36 +1031,36 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       pos = _startpos
     }
   )
-# 1063 "grammar__mock.ml.mock"
+# 1035 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 72 "grammar.mly"
                            _6
-# 1068 "grammar__mock.ml.mock"
+# 1040 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__6_ : Lexing.position) (_endpos__6_ : Lexing.position) (_startofs__6_ : int) (_endofs__6_ : int) (_loc__6_ : Lexing.position * Lexing.position) (
 # 72 "grammar.mly"
                         _5
-# 1072 "grammar__mock.ml.mock"
+# 1044 "grammar__mock.ml.mock"
    : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
 # 72 "grammar.mly"
                  _4
-# 1076 "grammar__mock.ml.mock"
+# 1048 "grammar__mock.ml.mock"
    : unit) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
 # 72 "grammar.mly"
              _3
-# 1080 "grammar__mock.ml.mock"
+# 1052 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
 # 72 "grammar.mly"
       _2
-# 1084 "grammar__mock.ml.mock"
+# 1056 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
 # 72 "grammar.mly"
    _1
-# 1088 "grammar__mock.ml.mock"
+# 1060 "grammar__mock.ml.mock"
    : (
 # 6 "grammar.mly"
        (string)
-# 1092 "grammar__mock.ml.mock"
+# 1064 "grammar__mock.ml.mock"
   )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 72 "grammar.mly"
@@ -1098,18 +1070,46 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       init = _6;
       pos = _startpos}
   )
-# 1102 "grammar__mock.ml.mock"
+# 1074 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 69 "grammar.mly"
              _3
-# 1107 "grammar__mock.ml.mock"
+# 1079 "grammar__mock.ml.mock"
    : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
 # 69 "grammar.mly"
       _2
-# 1111 "grammar__mock.ml.mock"
+# 1083 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
 # 69 "grammar.mly"
+   _1
+# 1087 "grammar__mock.ml.mock"
+   : (
+# 6 "grammar.mly"
+       (string)
+# 1091 "grammar__mock.ml.mock"
+  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 69 "grammar.mly"
+                     ( 
+    RecordExp {fields = []; typ = Symbol.symbol _1; pos = _startpos}
+  )
+# 1098 "grammar__mock.ml.mock"
+     : 'tv_exp) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 66 "grammar.mly"
+                      _4
+# 1103 "grammar__mock.ml.mock"
+   : unit) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
+# 66 "grammar.mly"
+             _3
+# 1107 "grammar__mock.ml.mock"
+   : 'tv_idexpseq) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 66 "grammar.mly"
+      _2
+# 1111 "grammar__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 66 "grammar.mly"
    _1
 # 1115 "grammar__mock.ml.mock"
    : (
@@ -1118,92 +1118,64 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
 # 1119 "grammar__mock.ml.mock"
   )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 69 "grammar.mly"
-                     ( 
-    RecordExp {fields = []; typ = Symbol.symbol _1; pos = _startpos}
-  )
-# 1126 "grammar__mock.ml.mock"
-     : 'tv_exp) in
-  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 66 "grammar.mly"
-                      _4
-# 1131 "grammar__mock.ml.mock"
-   : unit) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
-# 66 "grammar.mly"
-             _3
-# 1135 "grammar__mock.ml.mock"
-   : 'tv_idexpseq) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 66 "grammar.mly"
-      _2
-# 1139 "grammar__mock.ml.mock"
-   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 66 "grammar.mly"
-   _1
-# 1143 "grammar__mock.ml.mock"
-   : (
-# 6 "grammar.mly"
-       (string)
-# 1147 "grammar__mock.ml.mock"
-  )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
-    (
 # 66 "grammar.mly"
                               ( 
     RecordExp {fields = _3; typ = Symbol.symbol _1; pos = _startpos}
   )
-# 1154 "grammar__mock.ml.mock"
+# 1126 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 63 "grammar.mly"
    _1
-# 1159 "grammar__mock.ml.mock"
+# 1131 "grammar__mock.ml.mock"
    : 'tv_bool) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 63 "grammar.mly"
          ( 
     _1
   )
-# 1166 "grammar__mock.ml.mock"
+# 1138 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 60 "grammar.mly"
    _1
-# 1171 "grammar__mock.ml.mock"
+# 1143 "grammar__mock.ml.mock"
    : 'tv_comp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 60 "grammar.mly"
          ( 
     _1
   )
-# 1178 "grammar__mock.ml.mock"
+# 1150 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 57 "grammar.mly"
    _1
-# 1183 "grammar__mock.ml.mock"
+# 1155 "grammar__mock.ml.mock"
    : 'tv_arith) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 57 "grammar.mly"
           ( 
     _1
   )
-# 1190 "grammar__mock.ml.mock"
+# 1162 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 51 "grammar.mly"
              _3
-# 1195 "grammar__mock.ml.mock"
+# 1167 "grammar__mock.ml.mock"
    : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
 # 51 "grammar.mly"
       _2
-# 1199 "grammar__mock.ml.mock"
+# 1171 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
 # 51 "grammar.mly"
    _1
-# 1203 "grammar__mock.ml.mock"
+# 1175 "grammar__mock.ml.mock"
    : (
 # 6 "grammar.mly"
        (string)
-# 1207 "grammar__mock.ml.mock"
+# 1179 "grammar__mock.ml.mock"
   )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 52 "grammar.mly"
@@ -1212,127 +1184,127 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
             args = [];
             pos = _startpos}
   )
-# 1216 "grammar__mock.ml.mock"
+# 1188 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 47 "grammar.mly"
                         _4
-# 1221 "grammar__mock.ml.mock"
+# 1193 "grammar__mock.ml.mock"
    : unit) (_startpos__4_ : Lexing.position) (_endpos__4_ : Lexing.position) (_startofs__4_ : int) (_endofs__4_ : int) (_loc__4_ : Lexing.position * Lexing.position) (
 # 47 "grammar.mly"
              _3
-# 1225 "grammar__mock.ml.mock"
+# 1197 "grammar__mock.ml.mock"
    : 'tv_funcexpseq) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
 # 47 "grammar.mly"
       _2
-# 1229 "grammar__mock.ml.mock"
+# 1201 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
 # 47 "grammar.mly"
    _1
-# 1233 "grammar__mock.ml.mock"
+# 1205 "grammar__mock.ml.mock"
    : (
 # 6 "grammar.mly"
        (string)
-# 1237 "grammar__mock.ml.mock"
+# 1209 "grammar__mock.ml.mock"
   )) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 48 "grammar.mly"
   ( CallExp {func=Symbol.symbol _1; 
             args = _3;
             pos = _startpos})
-# 1244 "grammar__mock.ml.mock"
+# 1216 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 45 "grammar.mly"
                  _3
-# 1249 "grammar__mock.ml.mock"
+# 1221 "grammar__mock.ml.mock"
    : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
 # 45 "grammar.mly"
           _2
-# 1253 "grammar__mock.ml.mock"
+# 1225 "grammar__mock.ml.mock"
    : 'tv_expseq) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
 # 45 "grammar.mly"
    _1
-# 1257 "grammar__mock.ml.mock"
+# 1229 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 46 "grammar.mly"
   ( SeqExp(_2) )
-# 1262 "grammar__mock.ml.mock"
+# 1234 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
 # 43 "grammar.mly"
    _1
-# 1267 "grammar__mock.ml.mock"
+# 1239 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
 # 44 "grammar.mly"
   ( NilExp )
-# 1272 "grammar__mock.ml.mock"
+# 1244 "grammar__mock.ml.mock"
      : 'tv_exp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ->
     (
-# 283 "grammar.mly"
+# 277 "grammar.mly"
     ( [] )
+# 1250 "grammar__mock.ml.mock"
+     : 'tv_decs) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 276 "grammar.mly"
+           _2
+# 1255 "grammar__mock.ml.mock"
+   : 'tv_not_fundecs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 276 "grammar.mly"
+   _1
+# 1259 "grammar__mock.ml.mock"
+   : 'tv_fundecs) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 276 "grammar.mly"
+                        ( FunctionDec(_1) :: _2)
+# 1264 "grammar__mock.ml.mock"
+     : 'tv_decs) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 275 "grammar.mly"
+          _2
+# 1269 "grammar__mock.ml.mock"
+   : 'tv_decs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 275 "grammar.mly"
+   _1
+# 1273 "grammar__mock.ml.mock"
+   : 'tv_vardec) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 275 "grammar.mly"
+                ( _1 :: _2)
 # 1278 "grammar__mock.ml.mock"
      : 'tv_decs) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 282 "grammar.mly"
-           _2
+# 274 "grammar.mly"
+          _2
 # 1283 "grammar__mock.ml.mock"
-   : 'tv_not_fundecs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 282 "grammar.mly"
+   : 'tv_not_tydecs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 274 "grammar.mly"
    _1
 # 1287 "grammar__mock.ml.mock"
-   : 'tv_fundecs) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+   : 'tv_tydecs) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 282 "grammar.mly"
-                        ( FunctionDec(_1) :: _2)
+# 274 "grammar.mly"
+                      ( TypeDec(_1) :: _2)
 # 1292 "grammar__mock.ml.mock"
      : 'tv_decs) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 281 "grammar.mly"
-          _2
-# 1297 "grammar__mock.ml.mock"
-   : 'tv_decs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 281 "grammar.mly"
-   _1
-# 1301 "grammar__mock.ml.mock"
-   : 'tv_vardec) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
-    (
-# 281 "grammar.mly"
-                ( _1 :: _2)
-# 1306 "grammar__mock.ml.mock"
-     : 'tv_decs) in
-  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 280 "grammar.mly"
-          _2
-# 1311 "grammar__mock.ml.mock"
-   : 'tv_not_tydecs) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 280 "grammar.mly"
-   _1
-# 1315 "grammar__mock.ml.mock"
-   : 'tv_tydecs) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
-    (
-# 280 "grammar.mly"
-                      ( TypeDec(_1) :: _2)
-# 1320 "grammar__mock.ml.mock"
-     : 'tv_decs) in
-  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 245 "grammar.mly"
+# 239 "grammar.mly"
            _3
-# 1325 "grammar__mock.ml.mock"
+# 1297 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 245 "grammar.mly"
+# 239 "grammar.mly"
        _2
-# 1329 "grammar__mock.ml.mock"
+# 1301 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 245 "grammar.mly"
+# 239 "grammar.mly"
    _1
-# 1333 "grammar__mock.ml.mock"
+# 1305 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 245 "grammar.mly"
+# 239 "grammar.mly"
                 ( 
     OpExp {
     left = _1;
@@ -1341,23 +1313,23 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
     pos = _startpos
     }
   )
-# 1345 "grammar__mock.ml.mock"
+# 1317 "grammar__mock.ml.mock"
      : 'tv_comp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 237 "grammar.mly"
+# 231 "grammar.mly"
           _3
-# 1350 "grammar__mock.ml.mock"
+# 1322 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 237 "grammar.mly"
+# 231 "grammar.mly"
        _2
-# 1354 "grammar__mock.ml.mock"
+# 1326 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 237 "grammar.mly"
+# 231 "grammar.mly"
    _1
-# 1358 "grammar__mock.ml.mock"
+# 1330 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 237 "grammar.mly"
+# 231 "grammar.mly"
                ( 
     OpExp {
     left = _1;
@@ -1366,23 +1338,23 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
     pos = _startpos
     }
   )
-# 1370 "grammar__mock.ml.mock"
+# 1342 "grammar__mock.ml.mock"
      : 'tv_comp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 229 "grammar.mly"
+# 223 "grammar.mly"
           _3
-# 1375 "grammar__mock.ml.mock"
+# 1347 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 229 "grammar.mly"
+# 223 "grammar.mly"
        _2
-# 1379 "grammar__mock.ml.mock"
+# 1351 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 229 "grammar.mly"
+# 223 "grammar.mly"
    _1
-# 1383 "grammar__mock.ml.mock"
+# 1355 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 229 "grammar.mly"
+# 223 "grammar.mly"
                ( 
     OpExp {
     left = _1;
@@ -1391,23 +1363,23 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
     pos = _startpos
     }
   )
-# 1395 "grammar__mock.ml.mock"
+# 1367 "grammar__mock.ml.mock"
      : 'tv_comp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 222 "grammar.mly"
+# 216 "grammar.mly"
           _3
-# 1400 "grammar__mock.ml.mock"
+# 1372 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 222 "grammar.mly"
+# 216 "grammar.mly"
        _2
-# 1404 "grammar__mock.ml.mock"
+# 1376 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 222 "grammar.mly"
+# 216 "grammar.mly"
    _1
-# 1408 "grammar__mock.ml.mock"
+# 1380 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 222 "grammar.mly"
+# 216 "grammar.mly"
                ( 
         OpExp {
     left = _1;
@@ -1415,23 +1387,23 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
     right = _3;
     pos = _startpos }
   )
-# 1419 "grammar__mock.ml.mock"
+# 1391 "grammar__mock.ml.mock"
      : 'tv_comp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 214 "grammar.mly"
+# 208 "grammar.mly"
           _3
-# 1424 "grammar__mock.ml.mock"
+# 1396 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 214 "grammar.mly"
+# 208 "grammar.mly"
        _2
-# 1428 "grammar__mock.ml.mock"
+# 1400 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 214 "grammar.mly"
+# 208 "grammar.mly"
    _1
-# 1432 "grammar__mock.ml.mock"
+# 1404 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 214 "grammar.mly"
+# 208 "grammar.mly"
                ( 
     OpExp {
     left = _1;
@@ -1440,23 +1412,23 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
     pos = _startpos
     }
   )
-# 1444 "grammar__mock.ml.mock"
+# 1416 "grammar__mock.ml.mock"
      : 'tv_comp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 206 "grammar.mly"
+# 200 "grammar.mly"
           _3
-# 1449 "grammar__mock.ml.mock"
+# 1421 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 206 "grammar.mly"
+# 200 "grammar.mly"
        _2
-# 1453 "grammar__mock.ml.mock"
+# 1425 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 206 "grammar.mly"
+# 200 "grammar.mly"
    _1
-# 1457 "grammar__mock.ml.mock"
+# 1429 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 206 "grammar.mly"
+# 200 "grammar.mly"
                ( 
     OpExp {
       left = _1;
@@ -1465,23 +1437,23 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       pos = _startpos
     }
   )
-# 1469 "grammar__mock.ml.mock"
+# 1441 "grammar__mock.ml.mock"
      : 'tv_comp) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 263 "grammar.mly"
+# 257 "grammar.mly"
           _3
-# 1474 "grammar__mock.ml.mock"
+# 1446 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 263 "grammar.mly"
+# 257 "grammar.mly"
        _2
-# 1478 "grammar__mock.ml.mock"
+# 1450 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 263 "grammar.mly"
+# 257 "grammar.mly"
    _1
-# 1482 "grammar__mock.ml.mock"
+# 1454 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 263 "grammar.mly"
+# 257 "grammar.mly"
                ( 
     IfExp
     {
@@ -1491,23 +1463,23 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       pos = _startpos
     }
   )
-# 1495 "grammar__mock.ml.mock"
+# 1467 "grammar__mock.ml.mock"
      : 'tv_bool) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 254 "grammar.mly"
+# 248 "grammar.mly"
            _3
-# 1500 "grammar__mock.ml.mock"
+# 1472 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 254 "grammar.mly"
+# 248 "grammar.mly"
        _2
-# 1504 "grammar__mock.ml.mock"
+# 1476 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 254 "grammar.mly"
+# 248 "grammar.mly"
    _1
-# 1508 "grammar__mock.ml.mock"
+# 1480 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 254 "grammar.mly"
+# 248 "grammar.mly"
                 ( 
     IfExp
     {
@@ -1517,19 +1489,19 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       pos = _startpos
     }
   )
-# 1521 "grammar__mock.ml.mock"
+# 1493 "grammar__mock.ml.mock"
      : 'tv_bool) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 196 "grammar.mly"
+# 190 "grammar.mly"
          _2
-# 1526 "grammar__mock.ml.mock"
+# 1498 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 196 "grammar.mly"
+# 190 "grammar.mly"
    _1
-# 1530 "grammar__mock.ml.mock"
+# 1502 "grammar__mock.ml.mock"
    : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 196 "grammar.mly"
+# 190 "grammar.mly"
                             ( 
     OpExp {
       left = IntExp (0);
@@ -1538,23 +1510,23 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       pos = _startpos
     }
   )
-# 1542 "grammar__mock.ml.mock"
+# 1514 "grammar__mock.ml.mock"
      : 'tv_arith) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 188 "grammar.mly"
+# 182 "grammar.mly"
               _3
-# 1547 "grammar__mock.ml.mock"
+# 1519 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 188 "grammar.mly"
+# 182 "grammar.mly"
        _2
-# 1551 "grammar__mock.ml.mock"
+# 1523 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 188 "grammar.mly"
+# 182 "grammar.mly"
    _1
-# 1555 "grammar__mock.ml.mock"
+# 1527 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 188 "grammar.mly"
+# 182 "grammar.mly"
                    ( 
     OpExp {
       left = _1;
@@ -1563,23 +1535,23 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       pos = _startpos
     }
   )
-# 1567 "grammar__mock.ml.mock"
+# 1539 "grammar__mock.ml.mock"
      : 'tv_arith) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 180 "grammar.mly"
+# 174 "grammar.mly"
              _3
-# 1572 "grammar__mock.ml.mock"
+# 1544 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 180 "grammar.mly"
+# 174 "grammar.mly"
        _2
-# 1576 "grammar__mock.ml.mock"
+# 1548 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 180 "grammar.mly"
+# 174 "grammar.mly"
    _1
-# 1580 "grammar__mock.ml.mock"
+# 1552 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 180 "grammar.mly"
+# 174 "grammar.mly"
                   (   
     OpExp {
       left = _1;
@@ -1588,23 +1560,23 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       pos = _startpos
     }
   )
-# 1592 "grammar__mock.ml.mock"
+# 1564 "grammar__mock.ml.mock"
      : 'tv_arith) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 172 "grammar.mly"
+# 166 "grammar.mly"
              _3
-# 1597 "grammar__mock.ml.mock"
+# 1569 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 172 "grammar.mly"
+# 166 "grammar.mly"
        _2
-# 1601 "grammar__mock.ml.mock"
+# 1573 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 172 "grammar.mly"
+# 166 "grammar.mly"
    _1
-# 1605 "grammar__mock.ml.mock"
+# 1577 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 172 "grammar.mly"
+# 166 "grammar.mly"
                   ( 
     OpExp {
       left = _1;
@@ -1613,23 +1585,23 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       pos = _startpos
     }
   )
-# 1617 "grammar__mock.ml.mock"
+# 1589 "grammar__mock.ml.mock"
      : 'tv_arith) in
   let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
-# 164 "grammar.mly"
+# 158 "grammar.mly"
             _3
-# 1622 "grammar__mock.ml.mock"
+# 1594 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
-# 164 "grammar.mly"
+# 158 "grammar.mly"
        _2
-# 1626 "grammar__mock.ml.mock"
+# 1598 "grammar__mock.ml.mock"
    : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
-# 164 "grammar.mly"
+# 158 "grammar.mly"
    _1
-# 1630 "grammar__mock.ml.mock"
+# 1602 "grammar__mock.ml.mock"
    : 'tv_exp) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
     (
-# 164 "grammar.mly"
+# 158 "grammar.mly"
                  ( 
     OpExp {
       left = _1;
@@ -1638,13 +1610,13 @@ and (xv_vardec, xv_type_id, xv_tyfields, xv_tydecs, xv_tydec, xv_ty, xv_stmt, xv
       pos = _startpos;
     }
   )
-# 1642 "grammar__mock.ml.mock"
+# 1614 "grammar__mock.ml.mock"
      : 'tv_arith) in
   ((let rec diverge() = diverge() in diverge()) : 'tv_vardec * 'tv_type_id * 'tv_tyfields * 'tv_tydecs * 'tv_tydec * 'tv_ty * 'tv_stmt * 'tv_program * 'tv_not_tydecs * 'tv_not_fundecs * 'tv_lvalue * 'tv_idexpseq * 'tv_fundecs * 'tv_fundec * 'tv_funcexpseq * 'tv_expseq * 'tv_exp * 'tv_decs * 'tv_comp * 'tv_bool * 'tv_arith)
 
 and menhir_end_marker =
   0
 
-# 389 "grammar.mly"
+# 383 "grammar.mly"
   
-# 1651 "grammar__mock.ml.mock"
+# 1623 "grammar__mock.ml.mock"

@@ -134,13 +134,7 @@ exp:
     NilExp
   }
 stmt:
-  | ID ASSIGN exp { 
-    AssignExp {
-      var = SimpleVar(Symbol.symbol $1, $startpos);
-      exp = $3;
-      pos = $startpos;
-    }
-  }
+
   | lvalue ASSIGN exp { 
     AssignExp {
       var = $1;
