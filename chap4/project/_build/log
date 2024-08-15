@@ -13,22 +13,10 @@
 #  ; build_dir = In_build_dir "default"
 #  ; instrument_with = []
 #  }
-$ /home/anthonydu/.opam/default/bin/ocamlc.opt -config > /tmp/dune_db987c_output
-$ (cd _build/.sandbox/91d1a93928bc5099324b4d88640d7191/default && /home/anthonydu/.opam/default/bin/menhir grammar.mly --base grammar --infer-write-query grammar__mock.ml.mock)
-> File "grammar.mly", line 286, characters 0-3:
-> Warning: symbol dec is unreachable from any of the start symbol(s).
-$ (cd _build/default && /home/anthonydu/.opam/default/bin/ocamldep.opt -modules -impl grammar__mock.ml.mock) > _build/default/.parsetest.objs/grammar__mock.impl.d
-$ (cd _build/.sandbox/35000cf1b3a5fe62247ab5e16dcd8f01/default && /home/anthonydu/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I .parsetest.objs/byte -open Parsetest__ -short-paths -i -impl grammar__mock.ml.mock) > _build/.sandbox/35000cf1b3a5fe62247ab5e16dcd8f01/default/grammar__mock.mli.inferred
-$ (cd _build/.sandbox/002c0b1346d187df895312cfed5c49b6/default && /home/anthonydu/.opam/default/bin/menhir --explain grammar.mly --base grammar --infer-read-reply grammar__mock.mli.inferred)
-> File "grammar.mly", line 22, characters 0-9:
-> Warning: the precedence level assigned to LPAREN is never useful.
-> File "grammar.mly", line 27, characters 0-5:
-> Warning: the precedence level assigned to SEMICOLON is never useful.
-> Warning: one state has shift/reduce conflicts.
-> Warning: one shift/reduce conflict was arbitrarily resolved.
-$ (cd _build/default && /home/anthonydu/.opam/default/bin/ocamldep.opt -modules -impl grammar.ml) > _build/default/.parsetest.objs/parsetest__Grammar.impl.d
-$ (cd _build/default && /home/anthonydu/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I .parsetest.objs/byte -intf-suffix .ml -no-alias-deps -opaque -open Parsetest__ -o .parsetest.objs/byte/parsetest__Grammar.cmo -c -impl grammar.ml)
+$ /home/anthonydu/.opam/default/bin/ocamlc.opt -config > /tmp/dune_175af3_output
+$ (cd _build/default && /home/anthonydu/.opam/default/bin/ocamldep.opt -modules -impl prabsyn.ml) > _build/default/.parsetest.objs/parsetest__Prabsyn.impl.d
+$ (cd _build/default && /home/anthonydu/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I .parsetest.objs/byte -no-alias-deps -opaque -open Parsetest__ -o .parsetest.objs/byte/parsetest__Prabsyn.cmo -c -impl prabsyn.ml)
 $ (cd _build/default && /home/anthonydu/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o parsetest.cma .parsetest.objs/byte/parsetest__.cmo .parsetest.objs/byte/parsetest__Symbol.cmo .parsetest.objs/byte/parsetest__Absyn.cmo .parsetest.objs/byte/parsetest__Errormsg.cmo .parsetest.objs/byte/parsetest__Grammar.cmo .parsetest.objs/byte/parsetest__TigerLexer.cmo .parsetest.objs/byte/parsetest__Prabsyn.cmo .parsetest.objs/byte/parsetest.cmo)
-$ (cd _build/default && /home/anthonydu/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I .parsetest.objs/byte -I .parsetest.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Parsetest__ -o .parsetest.objs/native/parsetest__Grammar.cmx -c -impl grammar.ml)
+$ (cd _build/default && /home/anthonydu/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I .parsetest.objs/byte -I .parsetest.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Parsetest__ -o .parsetest.objs/native/parsetest__Prabsyn.cmx -c -impl prabsyn.ml)
 $ (cd _build/default && /home/anthonydu/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o parsetest.cmxa .parsetest.objs/native/parsetest__.cmx .parsetest.objs/native/parsetest__Symbol.cmx .parsetest.objs/native/parsetest__Absyn.cmx .parsetest.objs/native/parsetest__Errormsg.cmx .parsetest.objs/native/parsetest__Grammar.cmx .parsetest.objs/native/parsetest__TigerLexer.cmx .parsetest.objs/native/parsetest__Prabsyn.cmx .parsetest.objs/native/parsetest.cmx)
 $ (cd _build/default && /home/anthonydu/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I . -o parsetest.cmxs parsetest.cmxa)
