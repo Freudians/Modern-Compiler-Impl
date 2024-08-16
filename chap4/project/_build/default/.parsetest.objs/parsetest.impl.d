@@ -1,1 +1,1 @@
-parsetest.ml: Absyn ErrorMsg Errormsg Grammar Lexing String TigerLexer
+parsetest.ml: ErrorMsg Errormsg Grammar Lexing Prabsyn String TigerLexer

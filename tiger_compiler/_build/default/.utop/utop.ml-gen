@@ -22,6 +22,6 @@ Clflags.include_dirs :=
   ; "/home/anthonydu/.opam/default/lib/uutf"
   ; "/home/anthonydu/.opam/default/lib/xdg"
   ; "/home/anthonydu/.opam/default/lib/zed"
-  ; "/home/anthonydu/appel/chap4/project/_build/default/.parsetest.objs/byte"
+  ; "/home/anthonydu/appel/tiger_compiler/_build/default/src/.parsetest.objs/byte"
   ];
 UTop_main.main ();

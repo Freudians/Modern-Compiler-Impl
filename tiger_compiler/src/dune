@@ -1,0 +1,13 @@
+(menhir
+(modules grammar)
+(infer true)
+)
+
+(rule
+(target TigerLexer.ml)
+(deps TigerLexer.mll)
+(action (chdir %{workspace_root}
+(run %{bin:ocamllex} -q -o %{target} %{deps}))))
+
+(library
+(name parsetest))
