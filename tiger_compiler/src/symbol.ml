@@ -22,7 +22,7 @@
   module BTable = Map.Make(
     struct
     type t = string * int
-    let compare s1 s2 = Symbol.(get_int(s1) - get_int(s2))
+    let compare s1 s2 = get_int(s1) - get_int(s2)
     end 
   )
 
