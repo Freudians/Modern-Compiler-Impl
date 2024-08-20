@@ -10,4 +10,8 @@
 (run %{bin:ocamllex} -q -o %{target} %{deps}))))
 
 (library
-(name parsetest))
+(name parsetest)
+(libraries base stdio)
+(inline_tests)
+(preprocess (pps ppx_inline_test))
+)

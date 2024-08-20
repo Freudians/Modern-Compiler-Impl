@@ -18,6 +18,10 @@ type 'a table
 (**[empty] is a symbol table with no entries*)
 val empty: 'a table
 
-
+(**[enter ta sy t] returns [ta] with an additional mapping from
+[sy] to [t]*)
 val enter : 'a table -> t -> 'a -> 'a table
+
+(**[look ta sy] returns [Some b] where b is the binding of
+    [sy]. If [sy] is not in [ta] then None is returned*)
 val look : 'a table -> t -> 'a option

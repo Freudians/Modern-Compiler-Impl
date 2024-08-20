@@ -22,4 +22,3 @@ let lst_to_symb (lst : (string * 'a) list) : 'a Symbol.table =
 let base_tenv = 
   lst_to_symb base_tenv_symbs
 let base_venv = lst_to_symb base_venv_symbs
-let _ = assert (Symbol.look base_tenv (Symbol.symbol "int") = Some Types.STRING)
