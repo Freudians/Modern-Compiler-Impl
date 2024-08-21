@@ -75,3 +75,9 @@ let test_lex filename =
     in
     do_it ();
     close_in file
+    let typecheck filename = 
+      let ic = open_in filename in
+      let lexbuf = Lexing.from_channel ic in
+      let result = Grammar.program TigerLexer.token lexbuf in
+      Semant.transExp Env.base_venv Env.base_tenv result 
+    
