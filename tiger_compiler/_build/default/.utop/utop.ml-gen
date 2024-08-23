@@ -52,6 +52,6 @@ Clflags.include_dirs :=
   ; "/home/anthonydu/.opam/default/lib/variantslib"
   ; "/home/anthonydu/.opam/default/lib/xdg"
   ; "/home/anthonydu/.opam/default/lib/zed"
-  ; "/home/anthonydu/appel/tiger_compiler/_build/default/src/.parsetest.objs/byte"
+  ; "/home/anthonydu/appel/tiger_compiler/_build/default/src/.driver.objs/byte"
   ];
 UTop_main.main ();

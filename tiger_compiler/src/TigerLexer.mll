@@ -46,7 +46,7 @@ rule token = parse
 | "]" {RBRACK}
 | "&" {AND}
 | "|" {OR}
-| "*/" {ErrorMsg.error (Lexing.lexeme_start lexbuf) "Unclosed comment from back"; EOF}
+| "*/" {ErrorMsg.error (Lexing.lexeme_start_p lexbuf) "Unclosed comment from back"; EOF}
 | "/" {DIVIDE}
 | "*" {TIMES}
 | "+" {PLUS}
@@ -65,9 +65,9 @@ rule token = parse
 and comments = parse
 | "/*" {counter := !counter + 1; comments lexbuf}
 | "*/" {counter := !counter -1; if !counter > 0 then comments lexbuf else if !counter = 0 then token lexbuf else 
-        (ErrorMsg.error (Lexing.lexeme_start lexbuf) "unclosed comment from back"; EOF)}
+        (ErrorMsg.error (Lexing.lexeme_start_p lexbuf) "unclosed comment from back"; EOF)}
 | _ {comments lexbuf}
-| eof {ErrorMsg.error (Lexing.lexeme_start lexbuf) "unclosed comment"; EOF}
+| eof {ErrorMsg.error (Lexing.lexeme_start_p lexbuf) "unclosed comment"; EOF}
 and strings = parse 
 | "\\t" {Buffer.add_char string_buff '\t'; strings lexbuf}
 | "\\n" {Buffer.add_char string_buff '\n'; strings lexbuf}
@@ -77,9 +77,9 @@ and strings = parse
 | "\\" weird_whitespace {ignore_string lexbuf}
 | "\"" {()}
 | [^'\\'] as c {Buffer.add_char string_buff c; strings lexbuf}
-| eof {ErrorMsg.error (Lexing.lexeme_start lexbuf) "unclosed string";}
-| _ {ErrorMsg.error (Lexing.lexeme_start lexbuf) "illegal character in string";}
+| eof {ErrorMsg.error (Lexing.lexeme_start_p lexbuf) "unclosed string";}
+| _ {ErrorMsg.error (Lexing.lexeme_start_p lexbuf) "illegal character in string";}
 and ignore_string = parse
 | weird_whitespace "\\" {strings lexbuf}
 | _ {ignore_string lexbuf}
-| eof {ErrorMsg.error (Lexing.lexeme_start lexbuf) "unclosed string ignore";}
+| eof {ErrorMsg.error (Lexing.lexeme_start_p lexbuf) "unclosed string ignore";}
