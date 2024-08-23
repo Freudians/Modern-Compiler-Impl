@@ -3,24 +3,21 @@ type tenv = Types.ty Symbol.table
 type expty = Translate.exp * Types.ty
 
 (* evaluates an operand expression *)
-let eval_op_exp (_, l) (_, r)  = function
+let eval_op_exp (_, l) (_, r) pos = function
   | Absyn.EqOp | Absyn.NeqOp ->
     begin
     match (l, r) with
     | (Types.INT, Types.INT)
     | (Types.ARRAY _, Types.ARRAY _) ->
       ((), Types.INT)
-    | _ -> print_endline("Error: equals/not-equals
-    invoked with non-integer or non-array args"); ((), NIL)
+    | _ -> ErrorMsg.error_no_recover pos 
+    "equals/not-equals invoked with non-integer or non-array arguments"
     end
   | _ ->
     if l <> Types.INT || r <> Types.INT 
     then
-    begin
-      print_endline("error: arithmatic operation
-    invoked with non-intger args"); 
-    ((), Types.NIL)
-    end
+      ErrorMsg.error_no_recover pos 
+      "Arithematic operation invoked with non-integer arguments" 
     else
       ((), INT)
 
@@ -47,9 +44,9 @@ let rec transExp ve te aexp =
                 ErrorMsg.error_no_recover pos "Undefined function"
               end
           (*TODO: have eval_op_exp raise its own error*)
-          | OpExp {left; oper; right; _} -> 
-            eval_op_exp (trexp left) (trexp right) oper
-          | RecordExp {fields; typ; _} ->
+          | OpExp {left; oper; right; pos} -> 
+            eval_op_exp (trexp left) (trexp right) pos oper
+          | RecordExp {fields; typ; pos} ->
             begin
             match Symbol.look te typ with
               | Some real_ty -> 
@@ -67,9 +64,9 @@ let rec transExp ve te aexp =
                 ((), real_ty)
               else
                 ((), NIL)
-            | _ -> print_endline "Error: type not record"; ((), NIL)
+            | _ -> ErrorMsg.error_no_recover pos "Type not record"
               end
-            | None -> print_endline "Error: undefined type"; ((), NIL)
+            | None -> ErrorMsg.error_no_recover pos "Error: undefined type"
             end
           | SeqExp lst -> 
               (*ugly hack*)
@@ -81,7 +78,7 @@ let rec transExp ve te aexp =
               end
           | AssignExp {var=_; exp=_; pos=_} ->
             ((), NIL)
-          | IfExp {test; then_; else_; _} ->
+          | IfExp {test; then_; else_; pos} ->
             begin
             let (_, ty) = trexp test in
             match ty with
@@ -94,12 +91,12 @@ let rec transExp ve te aexp =
                   let (_, ty3) = trexp e2 in
                     if ty2 <> ty3 then
                       (*this is also an error state*)
-                      ((), Types.NIL)
+                      ErrorMsg.error_no_recover pos "Mismatching types in else and then expression"
                     else
                       ((), Types.NIL)
                     end
             (*this is an error state*)
-            | _ -> ((), Types.NIL)
+            | _ -> ErrorMsg.error_no_recover pos "Non-integer expression used in if test"
                   end
           | _ -> print_endline "Error: unexpected"; ((), Types.NIL)
         in trexp aexp
