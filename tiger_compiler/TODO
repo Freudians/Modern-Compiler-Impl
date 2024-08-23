@@ -1,2 +1,2 @@
-write tests for the parser/abstract syntax tree construction
-refactor the existing type-checker code
+implement error-handling in the grammar
+implement error-handling in the type-checker

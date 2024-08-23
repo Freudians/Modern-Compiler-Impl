@@ -4,7 +4,7 @@ module type ERRORMSG = sig
   val lineNum : int ref
   val linePos : int list ref
   val sourceStream : in_channel ref
-  val error : int -> string -> unit
+  val error : Lexing.position -> string -> unit
   exception Error
   val impossible : string -> 'a   (* raises Error *)
   val reset : unit -> unit
@@ -26,18 +26,10 @@ module ErrorMsg : ERRORMSG = struct
 
   exception Error
 
-  let error pos msg =
-    let rec look = function
-      | a :: rest, n ->
-          if a < pos then
-            Printf.printf ":%d.%d" n (pos - a)
-          else
-            look (rest, n - 1)
-      | _ -> print_string "0.0"
-    in
+  let error (pos : Lexing.position) msg =
     anyErrors := true;
     print_string !fileName;
-    look (!linePos, !lineNum);
+    Printf.printf ":%d.%d" pos.pos_lnum pos.pos_bol;
     print_string ":";
     print_string msg;
     print_newline ()

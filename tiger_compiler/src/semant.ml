@@ -51,6 +51,58 @@ let rec transExp ve te aexp =
               end
           | OpExp {left; oper; right; _} -> 
             eval_op_exp (trexp left) (trexp right) oper
+          | RecordExp {fields; typ; _} ->
+            begin
+            match Symbol.look te typ with
+              | Some real_ty -> 
+                begin
+                match real_ty with
+                  | Types.RECORD (lst, _) ->
+                    if List.equal
+                (fun x y -> x = y)
+                (List.fold_right (fun (_, ex, _) l -> 
+                  let (_, ty) = trexp ex in
+                  ty :: l) fields [])
+                (List.fold_right (fun (_, ty2) l2 -> ty2 :: l2)
+                lst [])
+              then
+                ((), real_ty)
+              else
+                ((), NIL)
+            | _ -> print_endline "Error: type not record"; ((), NIL)
+              end
+            | None -> print_endline "Error: undefined type"; ((), NIL)
+            end
+          | SeqExp lst -> 
+              (*ugly hack*)
+              begin
+              match lst with
+              | [] -> ((), NIL)
+              | [(e, _)] -> (trexp e)
+              | (e, _) :: rest -> let _ = ((trexp e) : expty) in trexp (SeqExp rest)
+              end
+          | AssignExp {var=_; exp=_; pos=_} ->
+            ((), NIL)
+          | IfExp {test; then_; else_; _} ->
+            begin
+            let (_, ty) = trexp test in
+            match ty with
+            | INT -> 
+              begin
+                match else_ with
+                | None -> ((), NIL)
+                | Some e2 -> 
+                  let (_, ty2) = trexp then_ in
+                  let (_, ty3) = trexp e2 in
+                    if ty2 <> ty3 then
+                      (*this is also an error state*)
+                      ((), Types.NIL)
+                    else
+                      ((), Types.NIL)
+                    end
+            (*this is an error state*)
+            | _ -> ((), Types.NIL)
+                  end
           | _ -> print_endline "Error: unexpected"; ((), Types.NIL)
         in trexp aexp
 

@@ -10,7 +10,7 @@
 (run %{bin:ocamllex} -q -o %{target} %{deps}))))
 
 (library
-(name parsetest)
+(name driver)
 (libraries base stdio)
 (preprocess (pps ppx_jane))
 (inline_tests)
