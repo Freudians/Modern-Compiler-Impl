@@ -31,7 +31,7 @@ let rec transExp ve te aexp =
           | Absyn.NilExp -> (((), Types.NIL) : expty)
           | IntExp _ -> ((), INT)
           | StringExp (_, _) -> ((), STRING)
-          | CallExp {func; args; _} -> 
+          | CallExp {func; args; pos} -> 
             begin 
               match Symbol.look ve func with
               | Some Env.FunEntry{formals; result} -> 
@@ -40,15 +40,13 @@ let rec transExp ve te aexp =
                   (List.map (fun x -> let (_, t) = trexp x in t) args)
                 then ((), result)
                 else 
-                  begin
-                  print_endline "Error: function called with invalid types";
-                  ((), Types.NIL)
-                  end
-              | Some Env.VarEntry {ty=_} -> print_endline "Error: variable
-              used as function"; ((), Types.NIL)
-              | None -> print_endline "Error: undefined function"; 
-              ((), Types.NIL)
+                  ErrorMsg.error_no_recover pos "Function arguments have invalid types"
+              | Some Env.VarEntry {ty=_} ->
+                ErrorMsg.error_no_recover pos "Variable invoked as function"
+              | None -> 
+                ErrorMsg.error_no_recover pos "Undefined function"
               end
+          (*TODO: have eval_op_exp raise its own error*)
           | OpExp {left; oper; right; _} -> 
             eval_op_exp (trexp left) (trexp right) oper
           | RecordExp {fields; typ; _} ->
@@ -108,26 +106,25 @@ let rec transExp ve te aexp =
 
 and transVar ve te avar =
     let rec trvar = function
-      | Absyn.SimpleVar (sy, _)-> 
+      | Absyn.SimpleVar (sy, pos)-> 
         begin
         match Symbol.look ve sy with
         | Some Env.VarEntry{ty} -> ((), ty)
-        | _ -> print_endline "error: undefined variable"; ((), NIL)
+        | _ -> ErrorMsg.error_no_recover pos "Undefined variable" 
         end
-      | Absyn.FieldVar (v, sy, _) ->
+      | Absyn.FieldVar (v, sy, pos) ->
         let (_, t) = trvar v in
         begin
           match t with
           | RECORD (lst, _) -> 
             let (_, rt) = 
              try List.find (fun (s, _) -> s = sy) lst with
-             | Not_found -> print_endline "error: variable
-             not in record"; (Symbol.symbol "err", NIL)
+             | Not_found -> ErrorMsg.error_no_recover pos ("Variable not found in record"); 
           in
             ((), rt)
-          | _ -> print_endline "error: type not record"; ((), NIL)
+          | _ -> ErrorMsg.error_no_recover pos "Variable isn't a record"; 
         end
-      | SubscriptVar (v, ex, _) ->
+      | SubscriptVar (v, ex, pos) ->
         let (_, t) = trvar v in 
         begin
           match t with
@@ -136,10 +133,8 @@ and transVar ve te avar =
             begin
               match t3 with
               | Types.INT -> ((), t2)
-              | _ -> print_endline "error: bad array index"; 
-                ((), NIL)
+              | _ -> ErrorMsg.error_no_recover pos "Bad array index"
             end
-          | _ -> print_endline "error: subscripting non-array";
-            ((), NIL)
+          | _ -> ErrorMsg.error_no_recover pos "Variable isn't an array; integer subscript can't be used"
           end
     in trvar avar

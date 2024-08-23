@@ -4,7 +4,7 @@ let parse filename =
     let result = Grammar.program TigerLexer.token lexbuf in
     close_in ic;
     Prabsyn.PrintAbsyn.print (stdout, result)    
-let%expect_test "1" = parse "/home/anthonydu/appel/tiger_compiler/testcases/test1.tig";
+let%expect_test "1" = parse "/home/anthonydu/appel/tiger_compiler/sample_programs/test1.tig";
   [%expect {|
     LetExp([
      TypeDec[
@@ -17,9 +17,7 @@ let%expect_test "1" = parse "/home/anthonydu/appel/tiger_compiler/testcases/test
      SeqExp[
       VarExp(
        SimpleVar(arr1))]) |}]
-
-
-let%expect_test "2" = parse "/home/anthonydu/appel/tiger_compiler/testcases/test2.tig";
+let%expect_test "2" = parse "/home/anthonydu/appel/tiger_compiler/sample_programs/test2.tig";
   [%expect {|
     LetExp([
      TypeDec[
@@ -34,7 +32,7 @@ let%expect_test "2" = parse "/home/anthonydu/appel/tiger_compiler/testcases/test
      SeqExp[
       VarExp(
        SimpleVar(arr1))]) |}]
-let%expect_test "3" = parse "/home/anthonydu/appel/tiger_compiler/testcases/test3.tig";
+let%expect_test "3" = parse "/home/anthonydu/appel/tiger_compiler/sample_programs/test3.tig";
   [%expect {|
     LetExp([
      TypeDec[

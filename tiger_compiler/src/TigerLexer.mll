@@ -1,6 +1,5 @@
 (*TODO: add support for control sequences*)
 {
-    open Errormsg
     let counter = ref 0
     let string_buff = Buffer.create 256
     open Grammar
