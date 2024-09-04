@@ -1,2 +1,2 @@
+add basic handling for declarations
 implement error-handling in the grammar
-implement error-handling in the type-checker
