@@ -79,4 +79,3 @@ let test_lex filename =
       let lexbuf = Lexing.from_channel ic in
       let result = Grammar.program TigerLexer.token lexbuf in
       Semant.transExp Env.base_venv Env.base_tenv result 
-    

@@ -23,12 +23,17 @@ let eval_op_exp (_, l) (_, r) pos = function
 (* checks if the result of an expression is [ref_typ] *)
 let check_res ((_, ty) : expty) ref_typ = 
   if ty = ref_typ then true else false
-
+(* Formally: the expression type monad! *)
+(* The box: 't is the expression*)
+(* functions: type -> b 't*)
 
 let rec transExp ve te aexp = 
           (*gets the type of an expression *)
           let rec exp_type exp = 
             let (_, typ) = trexp exp in typ
+          (*checks if exp is of type ref_typ*) 
+          and is_type exp ref_typ = 
+                if (exp_type exp) = ref_typ then true else false
           (*evaluates an expression*)
           and trexp : Absyn.exp -> expty = function
         (*TODO: add handling for varexp*)
@@ -40,16 +45,14 @@ let rec transExp ve te aexp =
             begin 
               match Symbol.look ve func with
               | Some Env.FunEntry{formals; result} -> 
-                if List.equal (fun x y -> x = y)
-                    formals
-                  (List.map exp_type args)
-                then ((), result)
+                if List.equal (=) formals (List.map exp_type args) then 
+			        ((), result)
                 else 
-                  ErrorMsg.error_no_recover pos "Function arguments have invalid types"
+                    ErrorMsg.error_no_recover pos "Function arguments have invalid types"
               | Some Env.VarEntry {ty=_} ->
-                ErrorMsg.error_no_recover pos "Variable invoked as function"
+                    ErrorMsg.error_no_recover pos "Variable invoked as function"
               | None -> 
-                ErrorMsg.error_no_recover pos "Undefined function"
+                    ErrorMsg.error_no_recover pos "Undefined function"
               end
           | OpExp {left; oper; right; pos} -> 
             eval_op_exp (trexp left) (trexp right) pos oper
@@ -60,20 +63,13 @@ let rec transExp ve te aexp =
                 begin
                 match real_ty with
                   | Types.RECORD (lst, _) ->
-                (*Algo: Fold is used to construct a list of types
-                out of both the fields and the list in the record. List
-                is then compared to ensure equality*)
-                    if List.equal
-                (fun x y -> x = y)
-                (List.fold_right (fun (_, ex, _) l -> 
-                  (exp_type ex) :: l) fields [])
-                (List.fold_right (fun (_, ty2) l2 -> ty2 :: l2)
-                lst [])
-              then
-                ((), real_ty)
-              else
-                ((), NIL)
-            | _ -> ErrorMsg.error_no_recover pos "Type not record"
+                    if List.equal (=) (List.map (fun (_, ex, _) -> (exp_type ex)) fields) 
+                        (List.map (fun (_, ty2) -> ty2 ) lst)
+                    then
+                        ((), real_ty)
+                    else
+                        ErrorMsg.error_no_recover pos "Type mismatch with record"
+                  | _ -> ErrorMsg.error_no_recover pos "Type not record"
               end
             | None -> ErrorMsg.error_no_recover pos "Error: undefined type"
             end
@@ -85,8 +81,13 @@ let rec transExp ve te aexp =
               | [(e, _)] -> (trexp e)
               | (e, _) :: rest -> let _ = ((trexp e) : expty) in trexp (SeqExp rest)
               end
-          | AssignExp {var=_; exp=_; pos=_} ->
-            ((), NIL)
+          | AssignExp {var; exp; pos} ->
+            (*TODO: check if var can actually be assigned-to*)
+              let (_, vartyp) = transVar ve te var in
+                if is_type exp vartyp then 
+                  ((), NIL)
+                else
+                  ErrorMsg.error_no_recover pos "Type mismatch in assignment"
           | IfExp {test; then_; else_; pos} ->
             begin
             let (_, ty) = trexp test in
@@ -94,20 +95,27 @@ let rec transExp ve te aexp =
             | INT -> 
               begin
                 match else_ with
-                | None -> ((), NIL)
+                | None -> 
+                    if is_type then_ NIL then
+                      ((), NIL)
+                    else
+                      ErrorMsg.error_no_recover pos "Body of if loop returns type"
                 | Some e2 -> 
+                if is_type then_ NIL then 
                   if exp_type then_ <> exp_type e2 then
                       ErrorMsg.error_no_recover pos "Mismatching types in else and then expression"
                     else
                       ((), Types.NIL)
+                else
+                    ErrorMsg.error_no_recover pos "Body of if loop returns type"
                     end
             (*this is an error state*)
             | _ -> ErrorMsg.error_no_recover pos "Non-integer expression used in if test"
             end
           | WhileExp {test; body; pos} -> 
             begin
-            if check_res (trexp test) INT then
-              if check_res (trexp body) NIL then
+            if is_type test INT then
+              if is_type body NIL then
                 ((), Types.NIL)
               else
                 ErrorMsg.error_no_recover pos
@@ -117,9 +125,9 @@ let rec transExp ve te aexp =
               "Non-integer expression used in while test"
             end
           | ForExp {var=_; escape=_; lo; hi; body; pos} ->
-            if check_res (trexp lo) INT then
-              if check_res (trexp hi) INT then
-                if check_res (trexp body) NIL then
+            if is_type lo INT then
+              if is_type hi INT then
+                if is_type body NIL then
                   ((), NIL)
                 else
                   ErrorMsg.error_no_recover pos
@@ -132,7 +140,29 @@ let rec transExp ve te aexp =
               "Low of for statement is not an integer"
           | BreakExp (_) ->
             ((), NIL)
-          | _ -> print_endline "Error: unexpected"; ((), Types.NIL)
+          | LetExp {decs; body; pos=_} ->
+            let (ve_, te_) = List.fold_left (fun (ve__, te__) d -> transDec ve__ te__ d) (ve, te) decs 
+              in
+            transExp ve_ te_ body
+          | ArrayExp {typ; size; init; pos} ->
+            if is_type size INT then
+              begin
+              match Symbol.look te typ with
+                | Some sym -> 
+                  begin
+                  match sym with
+                    | Types.ARRAY (elemty, _) ->
+                      if is_type init elemty then
+                        ((), sym)
+                      else
+                        ErrorMsg.error_no_recover pos "Type-initializer mismatch"
+                    | _ -> 
+                      ErrorMsg.error_no_recover pos "Type isn't an array"
+                  end
+                | None -> ErrorMsg.error_no_recover pos "ArrayExp: Undefined type"
+                  end
+                else
+                  ErrorMsg.error_no_recover pos "Size expression isn't an int"
         in trexp aexp
 
 and transVar ve te avar =
@@ -171,10 +201,10 @@ and transVar ve te avar =
     in trvar avar
 and transDec ve te (adec : Absyn.dec) = 
   let trdec = function
-  | Absyn.VarDec {name; escape=_; typ; init; pos} ->
+  | Absyn.VarDec {name; escape=_; typ; init; _} ->
     begin
     match typ with
-    | Some (sy, pos) -> 
+    | Some (sy, sympos) -> 
         begin
           match Symbol.look te sy with
           | Some ref_ty -> 
@@ -182,21 +212,51 @@ and transDec ve te (adec : Absyn.dec) =
             if check_res (transExp ve te init) ref_ty then
               (Symbol.enter ve name (Env.VarEntry{ty=ref_ty}), te)
             else
-              ErrorMsg.error_no_recover pos
+              ErrorMsg.error_no_recover sympos
               "Expression doesn't match type"
             end
-          | None -> ErrorMsg.error_no_recover pos
-          "Undefined type"
+          | None -> ErrorMsg.error_no_recover sympos
+          "VarDec: Undefined type"
           end
     | None -> 
       (Symbol.enter ve name (Env.VarEntry{ty= (let (_, ty_) = transExp ve te init in ty_)}), te)
     end
   | TypeDec (tylst) -> 
-    let enter_ty Absyn.{name; ty; _} te_ =
+    
+    let enter_ty te_ Absyn.{name; ty; _} =
       Symbol.enter te_ name (transTy te_ ty) 
     in
-    (ve, List.fold_right enter_ty tylst te)
-  | _ -> (ve, te)
+    (ve, List.fold_left enter_ty te tylst)
+  | FunctionDec (funlst) ->
+    (*TODO: finish up function dec checker*)
+    let field_to_sym Absyn.{name=_; escape=_; typ; pos}  = 
+      match Symbol.look te typ with
+      | Some typ_ -> typ_
+      | None -> ErrorMsg.error_no_recover pos 
+        "Undefined type"
+    in
+    let enter_func ve_ Absyn.{name; params; result=res; body; pos} =
+      begin
+      match res with
+      | Some (sym, sympos) -> 
+        begin
+          match Symbol.look te sym with
+          | Some typ_ -> 
+            if (check_res (transExp ve te body) typ_) then
+              Symbol.enter ve_ name 
+              (Env.FunEntry {formals = List.map field_to_sym params; result=typ_})
+            else
+              ErrorMsg.error_no_recover pos "Type annotation doesn't match function body"
+          | None -> ErrorMsg.error_no_recover sympos "Undefined type"
+        end
+      | None -> 
+        begin
+          Symbol.enter ve_ name 
+          (Env.FunEntry{formals = List.map field_to_sym params; result = let (_, typ_) = (transExp ve te body) in typ_})
+        end
+      end
+    in 
+    (List.fold_left enter_func ve funlst, te)
   in trdec adec
 and transTy te aty =
   match aty with
@@ -216,4 +276,8 @@ and transTy te aty =
         "Undefined type"
     in
       Types.RECORD (List.map (fun f -> field_to_sym f) flst, ref ())
-  | _ -> Types.NIL
+  | ArrayTy (sym, pos) ->
+    match Symbol.look te sym with
+    | Some typ -> Types.ARRAY (typ, ref ())
+    | None -> ErrorMsg.error_no_recover pos
+    "Undefined type"
