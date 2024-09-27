@@ -20,9 +20,24 @@ let eval_op_exp (_, l) (_, r) pos = function
       "Arithematic operation invoked with non-integer arguments" 
     else
       ((), INT)
+
+let unwrap_name typ =
+  match typ with
+  | Types.NAME (_, real_t) ->
+    begin
+    match !real_t with
+    | Some real_typ_ -> real_typ_
+    | None -> typ
+    end
+  | _ -> typ
+let type_eq t1 t2 =
+  match (unwrap_name t1), (unwrap_name t2) with
+  | Types.RECORD _, Types.NIL -> true
+  | Types.NIL, Types.RECORD _ -> true
+  | _, _ -> (unwrap_name t1) = (unwrap_name t2)
 (* checks if the result of an expression is [ref_typ] *)
 let check_res ((_, ty) : expty) ref_typ = 
-  if ty = ref_typ then true else false
+  type_eq ty ref_typ
 (* Formally: the expression type monad! *)
 (* The box: 't is the expression*)
 (* functions: type -> b 't*)
@@ -35,8 +50,26 @@ let rec transExp ve te aexp =
           and is_type exp ref_typ = 
                 if (exp_type exp) = ref_typ then true else false
           (*evaluates an expression*)
+          and type_lookup sym pos =
+              match Symbol.look te sym with
+              | Some typ ->
+                  begin
+                  match typ with
+                  | Types.NAME (_, typ_body) -> 
+                    begin
+                    match !typ_body with
+                    | Some real_typ -> real_typ
+                    | None -> typ
+                    end
+                  | _ -> typ
+                  end
+              | None -> ErrorMsg.error_no_recover pos "Undefined type"
+            and type_eq t1 t2 =
+              match t1, t2 with
+              | Types.RECORD _, Types.NIL -> true
+              | Types.NIL, Types.RECORD _ -> true
+              | _, _ -> t1 = t2
           and trexp : Absyn.exp -> expty = function
-        (*TODO: add handling for varexp*)
           | Absyn.VarExp v -> transVar ve te v
           | Absyn.NilExp -> (((), Types.NIL) : expty)
           | IntExp _ -> ((), INT)
@@ -46,7 +79,7 @@ let rec transExp ve te aexp =
               match Symbol.look ve func with
               | Some Env.FunEntry{formals; result} -> 
                 if List.equal (=) formals (List.map exp_type args) then 
-			        ((), result)
+			            ((), result)
                 else 
                     ErrorMsg.error_no_recover pos "Function arguments have invalid types"
               | Some Env.VarEntry {ty=_} ->
@@ -58,20 +91,33 @@ let rec transExp ve te aexp =
             eval_op_exp (trexp left) (trexp right) pos oper
           | RecordExp {fields; typ; pos} ->
             begin
-            match Symbol.look te typ with
-              | Some real_ty -> 
-                begin
-                match real_ty with
-                  | Types.RECORD (lst, _) ->
-                    if List.equal (=) (List.map (fun (_, ex, _) -> (exp_type ex)) fields) 
-                        (List.map (fun (_, ty2) -> ty2 ) lst)
-                    then
-                        ((), real_ty)
-                    else
-                        ErrorMsg.error_no_recover pos "Type mismatch with record"
-                  | _ -> ErrorMsg.error_no_recover pos "Type not record"
-              end
-            | None -> ErrorMsg.error_no_recover pos "Error: undefined type"
+            match type_lookup typ pos with
+            | Types.RECORD (lst, _)-> 
+              if List.equal (type_eq) (List.map (fun (_, ex, _) -> (
+                  let ex_typ = exp_type ex in
+                  match ex_typ with
+                  | Types.NAME (_, type_body) ->
+                    begin
+                    match !type_body with
+                    | Some real_type -> real_type
+                    | None -> ex_typ
+                    end
+                  | _ -> ex_typ
+                )) fields) 
+                (List.map (fun (_, ty2) -> match ty2 with
+                  | Types.NAME (_, type_body) ->
+                    begin
+                      match !type_body with
+                      | Some real_type -> real_type
+                      | None -> ty2
+                    end
+                  | _ -> ty2
+                 ) lst)
+              then
+                ((), type_lookup typ pos)
+              else
+                ErrorMsg.error_no_recover pos "Type mismatch with record"
+            | _ -> ErrorMsg.error_no_recover pos "Type isn't a record"
             end
           | SeqExp lst -> 
               (*ugly hack*)
@@ -82,7 +128,6 @@ let rec transExp ve te aexp =
               | (e, _) :: rest -> let _ = ((trexp e) : expty) in trexp (SeqExp rest)
               end
           | AssignExp {var; exp; pos} ->
-            (*TODO: check if var can actually be assigned-to*)
               let (_, vartyp) = transVar ve te var in
                 if is_type exp vartyp then 
                   ((), NIL)
@@ -222,11 +267,26 @@ and transDec ve te (adec : Absyn.dec) =
       (Symbol.enter ve name (Env.VarEntry{ty= (let (_, ty_) = transExp ve te init in ty_)}), te)
     end
   | TypeDec (tylst) -> 
-    
-    let enter_ty te_ Absyn.{name; ty; _} =
-      Symbol.enter te_ name (transTy te_ ty) 
+    (*First builds a modified symbol table containing all of the names,
+      then fills in the symbol table with their actual types*)
+    let te_rec = 
+      List.fold_left 
+      (fun tab Absyn.{name; ty=_; pos=_} -> 
+        Symbol.enter tab name (Types.NAME (name, ref None)))
+      te tylst
     in
-    (ve, List.fold_left enter_ty te tylst)
+    let enter_ty te_ Absyn.{name; ty; _} =
+      match Symbol.look te_ name with
+      | Some typ_ ->
+          begin
+          match typ_ with
+          | Types.NAME (_, type_body) ->
+              type_body := Some (transTy te_ ty); te_
+          | _ -> Symbol.enter te_ name (transTy te_ ty)
+          end
+      | None -> Symbol.enter te_ name (transTy te_ ty)
+    in
+    (ve, List.fold_left enter_ty te_rec tylst)
   | FunctionDec (funlst) ->
     (*TODO: finish up function dec checker*)
     let field_to_sym Absyn.{name=_; escape=_; typ; pos}  = 
@@ -234,6 +294,14 @@ and transDec ve te (adec : Absyn.dec) =
       | Some typ_ -> typ_
       | None -> ErrorMsg.error_no_recover pos 
         "Undefined type"
+    in
+    (*Get the headers of all the funcs*)
+    let ve_rec = 
+      List.fold_left 
+      (fun tab Absyn.{name; params; result=_; body=_; pos=_} -> 
+      Symbol.enter tab name 
+      (Env.FunEntry{formals= List.map field_to_sym params; result = Types.NAME (name, ref None)})) 
+      ve funlst
     in
     let enter_func ve_ Absyn.{name; params; result=res; body; pos} =
       begin
@@ -243,8 +311,21 @@ and transDec ve te (adec : Absyn.dec) =
           match Symbol.look te sym with
           | Some typ_ -> 
             if (check_res (transExp ve te body) typ_) then
-              Symbol.enter ve_ name 
-              (Env.FunEntry {formals = List.map field_to_sym params; result=typ_})
+              begin
+              match Symbol.look ve_ name with
+              | Some unparsedF -> 
+                begin
+                match unparsedF with
+                | Env.FunEntry{formals=_; result=existingResult} ->
+                  begin
+                  match existingResult with
+                  | Types.NAME (_, actualExistingResult) -> actualExistingResult := Some typ_; ve_
+                  | _ -> ve_
+                  end
+                | _ -> ErrorMsg.error_no_recover pos "Previously entered type not a function"
+                end
+              | None ->  Symbol.enter ve_ name  (Env.FunEntry {formals = List.map field_to_sym params; result=typ_})
+              end
             else
               ErrorMsg.error_no_recover pos "Type annotation doesn't match function body"
           | None -> ErrorMsg.error_no_recover sympos "Undefined type"
@@ -256,28 +337,31 @@ and transDec ve te (adec : Absyn.dec) =
         end
       end
     in 
-    (List.fold_left enter_func ve funlst, te)
+    (List.fold_left enter_func ve_rec funlst, te)
   in trdec adec
 and transTy te aty =
-  match aty with
-  | NameTy (sym, pos) ->
-    begin
+(*TODO: update to handle recursive types/instances of NAME*)
+  let type_lookup sym pos = 
     match Symbol.look te sym with
-    | Some typ -> typ
-    | None -> 
-      ErrorMsg.error_no_recover pos
-      "Undefined type"
-    end
+    | Some typ -> 
+      begin
+      (*We have mutual recursion now....*)
+      match typ with
+      | Types.NAME (_, type_wrapper) ->
+        begin
+        match !type_wrapper with
+        | Some real_typ -> real_typ
+        | None -> typ (*type hasn't been filled-in, return wrapper*)
+        end
+      | _ -> typ
+      end
+    | None -> ErrorMsg.error_no_recover pos "Undefined type"
+  in
+  match aty with
+  | NameTy (sym, pos) -> type_lookup sym pos
   | RecordTy (flst) ->
     let field_to_sym Absyn.{name; escape=_; typ; pos}  = 
-      match Symbol.look te typ with
-      | Some typ_ -> (name, typ_)
-      | None -> ErrorMsg.error_no_recover pos 
-        "Undefined type"
+      (name, type_lookup typ pos)
     in
       Types.RECORD (List.map (fun f -> field_to_sym f) flst, ref ())
-  | ArrayTy (sym, pos) ->
-    match Symbol.look te sym with
-    | Some typ -> Types.ARRAY (typ, ref ())
-    | None -> ErrorMsg.error_no_recover pos
-    "Undefined type"
+  | ArrayTy (sym, pos) -> Types.ARRAY((type_lookup sym pos), ref ())

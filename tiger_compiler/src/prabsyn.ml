@@ -33,8 +33,8 @@ let print (outstream, e0) =
   in
 
   let rec var (v, d) = match v with
-    | A.SimpleVar(s, _) -> 
-        (indent d; say "SimpleVar("; say (Symbol.name s); say ")")
+    | A.SimpleVar(s, pos) -> 
+        (indent d; say "SimpleVar("; say (Symbol.name s); say ", "; say (string_of_int pos.pos_lnum); say ")")
     | A.FieldVar(v, s, _) -> 
         (indent d; sayln "FieldVar(";
          var (v, d+1); sayln ",";
@@ -117,10 +117,10 @@ let print (outstream, e0) =
           | Some(s, _) -> (say "Some("; say (Symbol.name s); say ")"));
          sayln ","; exp (init, d+1); say ")")
     | A.TypeDec l -> 
-        let tdec (({name; ty=t; _} : A.atypedec), d) = 
+        let tdec (({name; ty=t; pos} : A.atypedec), d) = 
           (indent d; say"("; 
            say (Symbol.name name); sayln ",";
-           ty (t, d+1); say ")")
+           ty (t, d+1); sayln ","; say (string_of_int pos.pos_lnum); say ")")
         in
         (indent d; say "TypeDec["; dolist d tdec l; say "]")
    
